@@ -21,6 +21,8 @@ const MainPhoto = () => {
                     left: '30rem',
                     display: 'flex',
                     flexDirection: 'column'
+
+                    
                 }}
             >
                 <Box>
