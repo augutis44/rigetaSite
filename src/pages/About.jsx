@@ -1,21 +1,19 @@
 
 import MainBar from "../components/mainBar";
 import Footer from "../components/Footer";
-import Survey from "../components/Survey";
 
-const Contacts = () => {
+const About = () => {
 
     return (
         <>
             <MainBar />
-            <Survey />
             <Footer />
         </>
     );
 
 }
 
-export default Contacts;
+export default About;
 
 
 

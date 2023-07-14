@@ -1,9 +1,8 @@
-
-import React from "react";
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
+import About from "./pages/About";
 
 function App() {
 
@@ -15,7 +14,11 @@ function App() {
     },
     {
       path: "/contacts",
-      element: <Contacts />,
+      element: <Contacts />
+    },
+    {
+      path: "/about",
+      element: <About />
     }
   ]);
 
