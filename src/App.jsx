@@ -1,31 +1,31 @@
-import MainBar from "./components/mainBar";
-import theme from "./colorPalete";
-import { ThemeProvider } from "@emotion/react";
-import React from "react";
-import MainPhoto from "./components/MainPhoto";
-import MainBody from "./components/MainBody";
-import { Box, StyledEngineProvider } from "@mui/material";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Contacts from "./pages/Contacts";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
+import About from "./pages/About";
 
 function App() {
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/contacts",
+      element: <Contacts />
+    },
+    {
+      path: "/about",
+      element: <About />
+    }
+  ]);
+
   return (
-    <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <StyledEngineProvider injectFirst>
-          <MainBar />
-          <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-          >
-            <MainPhoto />
-            <MainBody />
-          </Box>
-          <Footer />
-        </StyledEngineProvider>
-      </ThemeProvider>
-    </React.StrictMode>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 
 }
