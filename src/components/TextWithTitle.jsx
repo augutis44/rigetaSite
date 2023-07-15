@@ -9,7 +9,7 @@ const TextWithTitle = ({ title, children, textColor }) => {
             <Typography variant="h4">
                 {title}
             </Typography>
-            <Typography>
+            <Typography variant="h6">
                 {children}
             </Typography>
         </Box>

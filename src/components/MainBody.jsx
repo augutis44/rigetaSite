@@ -9,9 +9,9 @@ const MainBody = () => {
                 zIndex: -1,
                 top: 0,
                 left: 0,
-                height: '32rem',
+                height: '33rem',
                 backgroundColor: '#274367',
-                margin: '60rem 0rem 0rem 0rem',
+                margin: '66rem 0rem 0rem 0rem',
                 width: '100%',
                 position: 'absolute'
             }} />
