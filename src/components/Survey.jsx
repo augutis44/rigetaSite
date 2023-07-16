@@ -1,6 +1,34 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
 const Survey = () => {
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [question, setQuestion] = useState('');
+
+    const filledSurvey = `Mano vardas ${name} ${surname}. Noreciau paklausti: ${question}. Prasau susisiekti su manimi siuo el. pastu ${email}`
+
+    const textFieldChange = () => {
+        switch (event.target.id) {
+            case 'name':
+                setName(event.target.value);
+                break;
+            case 'surname':
+                setSurname(event.target.value);
+                break;
+            case 'email':
+                setEmail(event.target.value);
+                break;
+            case 'question':
+                setQuestion(event.target.value);
+                break;
+        }
+    }
+
+    const handleClick = () => {
+        console.log(filledSurvey)
+    }
 
     return (
         <>
@@ -27,27 +55,35 @@ const Survey = () => {
                         alignItems: 'flex-start',
                     }}>
                         <TextField
+                            id='name'
                             required
-                            label="Privalomas"
-                            defaultValue="Vardas"
+                            label="Vardas"
+                            onChange={textFieldChange}
+                            value={name}
                         />
                         <TextField
-                            defaultValue="Pavardė"
+                            id='surname'
+                            label="Pavardė"
+                            onChange={textFieldChange}
+                            value={surname}
                         />
                         <TextField
+                            id='email'
                             required
-                            label="Privalomas"
-                            defaultValue="El.paštas"
+                            label="El.paštas"
+                            onChange={textFieldChange}
+                            value={email}
                         />
                         <TextField
+                            id='question'
                             required
-                            id="outlined-multiline-static"
-                            label="Privalomas"
+                            label="Klausimas"
                             multiline
                             rows={4}
-                            defaultValue="Klausimas"
+                            onChange={textFieldChange}
+                            value={question}
                         />
-                        <Button variant="contained" color="secondary" sx={{
+                        <Button variant="contained" color="secondary" onClick={handleClick} sx={{
                             color: '#ffffff'
                         }}>
                             Susisiekti
