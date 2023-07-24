@@ -13,6 +13,10 @@ const MainBar = () => {
             to: '/'
         },
         {
+            label: 'Paslaugos',
+            to: '/services'
+        },
+        {
             label: 'Apie',
             to: '/about'
         },
