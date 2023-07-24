@@ -3,6 +3,7 @@ import Contacts from "./pages/Contacts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
+import Services from "./pages/Services";
 
 function App() {
 
@@ -19,6 +20,10 @@ function App() {
     {
       path: "/about",
       element: <About />
+    },
+    {
+      path: "/services",
+      element: <Services />
     }
   ]);
 

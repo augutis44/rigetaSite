@@ -1,6 +1,11 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Noto Sans !important', 'sans-serif'
+    ],
+  },
   palette: {
     primary: {
       light: '#1b2e48',

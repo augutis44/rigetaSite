@@ -1,4 +1,6 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 import { useState } from "react";
 
 const Survey = () => {
@@ -8,6 +10,14 @@ const Survey = () => {
     const [question, setQuestion] = useState('');
 
     const filledSurvey = `Mano vardas ${name} ${surname}. Noreciau paklausti: ${question}. Prasau susisiekti su manimi siuo el. pastu ${email}`
+
+    const surveyAlert = () => {
+        return (
+          <Stack sx={{ width: '100%' }} spacing={2}>
+            <Alert severity="success">This is a success alert — check it out!</Alert>
+          </Stack>
+        );
+      }
 
     const textFieldChange = () => {
         switch (event.target.id) {
@@ -27,7 +37,8 @@ const Survey = () => {
     }
 
     const handleClick = () => {
-        console.log(filledSurvey)
+        surveyAlert();
+        console.log(filledSurvey);
     }
 
     return (
@@ -89,10 +100,8 @@ const Survey = () => {
                             Susisiekti
                         </Button>
                     </Box>
-
                 </Box>
             </Box >
-
         </>
     )
 }
