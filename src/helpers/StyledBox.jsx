@@ -17,7 +17,19 @@ height: 4rem
 export const SideBox = ({ children }) => {
     return (
         <Box sx={{
-            margin: {xs: '0rem 2rem', sm: '0rem 4rem', md: '0rem 8rem' }
+            margin: { xs: '0rem 2rem', sm: '0rem 4rem', md: '0rem 8rem' }
+        }}>
+            {children}
+        </Box>
+    )
+}
+
+export const BackBox = ({ children }) => {
+    return (
+        <Box sx={{
+            backgroundColor: '#F9F9F9',
+            zIndex: '-1',
+            padding: '2rem'
         }}>
             {children}
         </Box>

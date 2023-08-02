@@ -2,6 +2,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import { useState } from "react";
+import InformationRigeta from "./InformacionRigeta"
 
 const Survey = () => {
     const [name, setName] = useState('');
@@ -13,11 +14,11 @@ const Survey = () => {
 
     const surveyAlert = () => {
         return (
-          <Stack sx={{ width: '100%' }} spacing={2}>
-            <Alert severity="success">This is a success alert — check it out!</Alert>
-          </Stack>
+            <Stack sx={{ width: '100%' }} spacing={2}>
+                <Alert severity="success">This is a success alert — check it out!</Alert>
+            </Stack>
         );
-      }
+    }
 
     const textFieldChange = () => {
         switch (event.target.id) {
@@ -48,60 +49,67 @@ const Survey = () => {
             }}>
                 SUSISIEKITE
             </Typography>
-            <Box
-                component="form"
-                sx={{
-                    '& .MuiTextField-root': { margin: '0.5rem 0rem', width: '100%' },
-                    marginBottom: '3rem',
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <Box sx={{
-                    padding: '0rem 15rem'
-                }}>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
+                <Box
+                    component="form"
+                    sx={{
+                        '& .MuiTextField-root': { margin: '0.5rem 0rem', width: '100%' },
+                        marginBottom: '3rem',
+                    }}
+                    noValidate
+                    autoComplete="off"
+                >
                     <Box sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'flex-start',
+                        padding: '0rem 2rem'
                     }}>
-                        <TextField
-                            id='name'
-                            required
-                            label="Vardas"
-                            onChange={textFieldChange}
-                            value={name}
-                        />
-                        <TextField
-                            id='surname'
-                            label="Pavardė"
-                            onChange={textFieldChange}
-                            value={surname}
-                        />
-                        <TextField
-                            id='email'
-                            required
-                            label="El.paštas"
-                            onChange={textFieldChange}
-                            value={email}
-                        />
-                        <TextField
-                            id='question'
-                            required
-                            label="Klausimas"
-                            multiline
-                            rows={4}
-                            onChange={textFieldChange}
-                            value={question}
-                        />
-                        <Button variant="contained" color="secondary" onClick={handleClick} sx={{
-                            color: '#ffffff'
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'flex-start',
                         }}>
-                            Susisiekti
-                        </Button>
+                            <TextField
+                                id='name'
+                                required
+                                label="Vardas"
+                                onChange={textFieldChange}
+                                value={name}
+                            />
+                            <TextField
+                                id='surname'
+                                label="Pavardė"
+                                onChange={textFieldChange}
+                                value={surname}
+                            />
+                            <TextField
+                                id='email'
+                                required
+                                label="El.paštas"
+                                onChange={textFieldChange}
+                                value={email}
+                            />
+                            <TextField
+                                id='question'
+                                required
+                                label="Klausimas"
+                                multiline
+                                rows={4}
+                                onChange={textFieldChange}
+                                value={question}
+                            />
+                            <Button variant="contained" color="primary" onClick={handleClick} sx={{
+                                color: '#ffffff'
+                            }}>
+                                Susisiekti
+                            </Button>
+                        </Box>
                     </Box>
-                </Box>
-            </Box >
+                </Box >
+                <InformationRigeta />
+            </Box>
         </>
     )
 }

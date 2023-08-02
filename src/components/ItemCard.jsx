@@ -5,18 +5,18 @@ import Buttons from "./Buttons";
 
 const ItemCard = ({ label, price, content }) => {
     return (
-        <Grid item xs={12} sm={6} md={4} spacing={2}>
-            <ColumnFlexBox sx={{
-            }}>
+        <Grid item xs={12} sm={6} md={4}>
+            <ColumnFlexBox>
                 <Box id='firstHalf' sx={{
-                    backgroundColor: '#EDF5FF',
+                    backgroundColor: '#E7EDFF',
                     borderStyle: 'solid',
                     borderWidth: '1px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     padding: '1rem 3rem',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    borderRadius: '0.5rem 0.5rem 0rem 0rem'
                 }}>
                     <Typography variant='h5'>
                         {label}
@@ -62,7 +62,9 @@ const ItemCard = ({ label, price, content }) => {
                     display: 'flex',
                     flexDirection: 'column',
                     textAlign: 'center',
-                    backgroundColor: '#ffffff'
+                    backgroundColor: '#ffffff',
+                    borderRadius: '0rem 0rem 0.5rem 0.5rem'
+
                 }}>
                     <Box sx={{
                         margin: '0.5rem',

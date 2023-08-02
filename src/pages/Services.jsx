@@ -1,32 +1,25 @@
 
-import MainBar from "../components/mainBar";
 import Footer from "../components/Footer";
 import PacketCards from "../components/PacketCards";
 import ServiceAccordion from "../components/ServiceAccordion";
-import { Box } from "@mui/material";
-import { WhiteBox } from "../helpers/StyledBox";
+import { BackBox, WhiteBox } from "../helpers/StyledBox";
+import MainTitle from "../components/MainTitle";
+import AppBarStyled from "../components/AppBarStyled";
 
 const Services = () => {
 
     return (
         <>
-            <MainBar />
+            <AppBarStyled />
+            <MainTitle>Paslaugos</MainTitle>
             <WhiteBox />
-            <Box sx={{
-                backgroundColor: '#F1FAEE',
-                zIndex: '-1',
-                padding: '2rem'
-            }}>
+            <BackBox>
                 <PacketCards />
-            </Box>
+            </BackBox>
             <WhiteBox />
-            <Box sx={{
-                backgroundColor: '#F1FAEE',
-                zIndex: '-1',
-                padding: '2rem'
-            }}>
+            <BackBox>
                 <ServiceAccordion />
-            </Box>
+            </BackBox>
             <WhiteBox />
             <Footer />
         </>
