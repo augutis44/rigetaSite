@@ -4,6 +4,12 @@ import { SideBox } from "../helpers/StyledBox";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+// const ServiceNameTypography = styled(Typography)(({theme}) => ({
+//     [theme.breakpoints.down('laptop')]: {
+//         variant: 'h4',
+//       },
+// }))
+
 const cardItems = [
     {
         label: 'Mažasis paketas',
@@ -34,7 +40,7 @@ const PacketCards = () => {
                 align: 'center',
                 margin: 'auto'
             }}>
-                <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
+                <Typography variant={isDownSm ? 'h4' : 'h2'} sx={{
                     textAlign: 'center',
                     margin: '0rem 0rem 3rem',
                     fontWeight: '400'
