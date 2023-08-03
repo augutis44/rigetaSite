@@ -1,22 +1,26 @@
 import { Box, Typography } from "@mui/material";
 
 const FooterText = ({ name, children }) => {
+
     return (
-        <Box>
+        <Box sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center'
+        }}>
             <Typography sx={{
-                margin: '1rem 0rem',
                 fontWeight: 'bold'
-            }}
-            >
+            }}>
                 {name}
             </Typography>
-            <Typography sx={{
-                margin: '1rem 0rem'
+            <Typography gutterBottom sx={{
+                textAlign: 'center',
+                marginBottom: '1rem'
             }}>
                 {children}
             </Typography>
         </Box>
-    )
+    );
 }
 
 export default FooterText;
