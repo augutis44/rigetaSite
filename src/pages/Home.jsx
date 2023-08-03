@@ -1,11 +1,11 @@
 import MainPhoto from "../components/MainPhoto";
-import MainBody from "../components/MainBody";
 import Footer from "../components/Footer";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import AboutRigetaMain from "../components/AboutRigetaMain";
 import ServicesMain from "../components/ServicesMain";
 import HomeAccordion from "../components/HomeAccordion";
 import AppBarStyled from "../components/AppBarStyled";
+import PartnersMain from "../components/PartnersMain";
 
 const Home = () => {
 
@@ -27,7 +27,7 @@ const Home = () => {
             </BackBox>
             <WhiteBox />
             <BackBox>
-                <MainBody />
+                <PartnersMain />
             </BackBox>
             <WhiteBox />
             <Footer />
@@ -37,4 +37,3 @@ const Home = () => {
 }
 
 export default Home;
-

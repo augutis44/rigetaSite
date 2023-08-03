@@ -17,7 +17,7 @@ height: 4rem
 export const SideBox = ({ children }) => {
     return (
         <Box sx={{
-            margin: { xs: '0rem 2rem', sm: '0rem 4rem', md: '0rem 8rem' }
+            padding: { xs: '0rem 1rem', sm: '0rem 2rem', md: '0rem 5rem', lg: '0rem 10rem' }
         }}>
             {children}
         </Box>

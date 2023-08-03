@@ -1,7 +1,7 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery } from "@mui/material";
 import { SlArrowRight } from "react-icons/sl";
 import { styled } from '@mui/material/styles';
-
+import { useTheme } from '@mui/material/styles';
 
 const StyledAccordionSummary = ({ children }) => {
     return (
@@ -16,7 +16,7 @@ const StyledAccordionSummary = ({ children }) => {
             {children}
         </AccordionSummary>
     )
-}
+};
 
 const CustomAccordion = styled(Accordion)(({ theme }) => {
     return {
@@ -28,15 +28,18 @@ const CustomAccordion = styled(Accordion)(({ theme }) => {
 });
 
 const StyledAccordion = ({ accordionItem, expanded, handleChange }) => {
+    const theme = useTheme();
+    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
+
     const { label, title, body } = accordionItem;
 
     return (
         <CustomAccordion expanded={expanded === label} onChange={handleChange}>
             <StyledAccordionSummary>
-                <Typography>{title}</Typography>
+                <Typography variant={isDownSm ? 'h6' : 'h5'}>{title}</Typography>
             </StyledAccordionSummary>
             <AccordionDetails>
-                <Typography variant="body2">
+                <Typography variant="body1">
                     {body}
                 </Typography>
             </AccordionDetails>
@@ -45,4 +48,3 @@ const StyledAccordion = ({ accordionItem, expanded, handleChange }) => {
 }
 
 export default StyledAccordion;
-

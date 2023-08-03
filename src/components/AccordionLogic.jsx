@@ -21,4 +21,3 @@ const AccordionLogic = ({ accordionItems }) => {
 }
 
 export default AccordionLogic;
-

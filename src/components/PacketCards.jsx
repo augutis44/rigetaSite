@@ -63,5 +63,4 @@ const PacketCards = () => {
     )
 }
 
-
 export default PacketCards;

@@ -28,24 +28,18 @@ const HomeAccordion = () => {
 
     return (
         <SideBox>
-            <Grid sx={{
-                maxWidth: '62rem',
-                align: 'center',
-                margin: 'auto'
+            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
+                marginLeft: '1rem',
+                marginBottom: '2rem',
+                fontWeight: '400',
+                textAlign: 'center',
             }}>
-                <Typography variant={isDownSm ? 'h4' : 'h2'} sx={{
-                    textAlign: 'center',
-                    fontWeight: '400',
-                    margin: '0rem 0rem 3rem'
-                }}>
-                    Papildoma informacija
-                </Typography>
-                <AccordionLogic accordionItems={accordionItems}>
-                </AccordionLogic>
-            </Grid>
+                Papildoma informacija
+            </Typography>
+            <AccordionLogic accordionItems={accordionItems}>
+            </AccordionLogic>
         </SideBox>
     )
 }
 
 export default HomeAccordion;
-
