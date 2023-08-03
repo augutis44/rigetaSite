@@ -4,7 +4,6 @@ import { useTheme } from '@mui/material/styles';
 import ServiceHomeCard from "./ServiceHomeCard";
 import { Link } from "react-router-dom";
 
-
 const ServicesMain = () => {
     const theme = useTheme();
     const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
@@ -14,7 +13,8 @@ const ServicesMain = () => {
             <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
                 marginLeft: '1rem',
                 marginBottom: '2rem',
-                fontWeight: '400'
+                fontWeight: '400',
+                textAlign: 'center'
             }}>
                 Paslaugos
             </Typography>

@@ -14,7 +14,8 @@ const AboutRigetaMain = () => {
             <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
                 marginLeft: '1rem',
                 marginBottom: '2rem',
-                fontWeight: '400'
+                fontWeight: '400',
+                textAlign: 'center'
             }}>
                 Apie „Rigeta“
             </Typography>

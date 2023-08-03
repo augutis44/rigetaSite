@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import AboutRigetaMain from "./AboutRigetaMain";
 
-const MainBody = () => {
+const PartnersMain = () => {
     return (
         <Box>
             <Box sx={{
@@ -36,4 +35,4 @@ const MainBody = () => {
 
 }
 
-export default MainBody;
+export default PartnersMain;
