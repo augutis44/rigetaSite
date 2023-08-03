@@ -32,7 +32,7 @@ const HomeAccordion = () => {
                 marginLeft: '1rem',
                 marginBottom: '2rem',
                 fontWeight: '400',
-                textAlign: 'center'
+                textAlign: 'center',
             }}>
                 Papildoma informacija
             </Typography>

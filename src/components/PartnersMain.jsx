@@ -1,38 +1,41 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const PartnersMain = () => {
     return (
         <Box>
-            <Box sx={{
-                alignItems: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                margin: '1rem'
+            <Typography variant="h2" sx={{
+                fontWeight: 'bold',
+                textAlign: 'center'
             }}>
-
-                <Typography variant="h2" sx={{
-                    fontWeight: 'bold'
-                }}
-                >MUMIS PASITIKI
-                </Typography>
-                <Typography variant="h5">15 metų patirtis buhalterinės apskaitos srityje, leido sukaupti didelį mumis pasitikinčių klientų ratą.</Typography>
-                <Box sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-around',
-                    width: '80rem',
-                    margin: '2rem 0rem 0rem 0rem' 
-                }}>
+                MUMIS PASITIKI
+            </Typography>
+            <Typography variant="h5" sx={{
+                textAlign: 'center'
+            }}>
+                15 metų patirtis buhalterinės apskaitos srityje, leido sukaupti didelį mumis pasitikinčių klientų ratą.
+            </Typography>
+            <Grid container spacing={3} sx={{
+                display: 'flex',
+                marginTop: '0.5rem',
+                flexDirection: { xs: 'column', md: 'row' },
+                alignItems: 'center',
+                justifyContent: 'space-between'
+            }}>
+                <Grid item>
                     <Box component="img" src='public\download.jpg' />
+                </Grid>
+                <Grid item>
                     <Box component="img" src='public\zaliaframes.png' />
+                </Grid>
+                <Grid item>
                     <Box component="img" src='public\Black & White Minimalist Business Logo.png' />
+                </Grid>
+                <Grid item>
                     <Box component="img" src='public\img.jpg' />
-                </Box>
-            </Box>
+                </Grid>
+            </Grid>
         </Box>
-    )
-
+    );
 }
 
 export default PartnersMain;
