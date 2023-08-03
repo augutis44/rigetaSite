@@ -1,65 +1,71 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography, useMediaQuery } from "@mui/material";
 import { SideBox } from "../helpers/StyledBox";
-import Buttons from "./Buttons";
+import { TfiArrowRight } from "react-icons/tfi";
+import { Link } from "react-router-dom";
+import { useTheme } from '@mui/material/styles';
 
 const AboutRigetaMain = () => {
+    const theme = useTheme();
+    const isDownLg = useMediaQuery(theme.breakpoints.down('lg'));
+    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <SideBox>
-            <Box
-                sx={{
-                    align: 'center',
-                    margin: 'auto',
-                }}>
-
-                <Typography variant='h3' sx={{
-                    margin: '0rem 0rem 2rem 1rem'
-                }}>
-                    Apie "Rigeta"
-                </Typography>
-                <Card sx={{
-                    maxWidth: '100%',
+            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
+                marginLeft: '1rem',
+                marginBottom: '2rem',
+                fontWeight: '400'
+            }}>
+                Apie „Rigeta“
+            </Typography>
+            <Card sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row-reverse' }//nuo maziausio xs rezio iki md maziausio rezio
+            }}>
+                <CardMedia
+                    component='img'
+                    alt='two people sitting in the office'
+                    image='public\two-business-partners-working-together-office.jpg' sx={{
+                        maxHeight: '30rem',
+                    }}
+                />
+                <Box sx={{
                     display: 'flex',
-                    flexDirection: 'row-reverse'
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
                 }}>
-                    <CardMedia
-                        component="img"
-                        alt="green iguana"
-                        height="140"
-                        image="public\two-business-partners-working-together-office.jpg" sx={{
-                            maxHeight: '30rem',
-                            height: 'auto'
-                        }}
-                    />
-                    <Box >
-                        <CardContent sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
+                    <CardContent sx={{
+                        minWidth: { xs: '100%', md: '50%' }
+                    }}>
+                        <Typography variant={isDownLg ? 'h4' : 'h3'}>
+                            Rita Kraujalienė
+                        </Typography>
+                        <Typography gutterBottom variant={isDownLg ? 'h6' : 'h5'} color="text.primary">
+                            UAB „Rigeta“ vadovė
+                        </Typography>
+                        <Typography paragraph variant={isDownLg ? 'body1' : 'h6'} color="text.primary" sx={{
+                            marginRight: '3rem',
                         }}>
-                            <Typography gutterBottom variant="h4" component="div">
-                                Rita Kraujalienė
-                            </Typography>
-                            <Typography variant="h6">
-                                UAB “Rigeta” vadovė
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Curabitur et turpis vestibu. lum, ultricies urna vitae, lacinia est.
-                                Maecenas acvelit metus. Urab itur et turpis. Curabitur et turpis vestibu.
-                                lum, ultricies urna vitae, lacinia est.
-                                Maecenas acvelit metus. Urab itur et turpis.
-                                Curabitur et turpis vestibu. lum, ultricies urna vitae, lacinia est.
-                                Maecenas acvelit metus. Urab itur et turpis.
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Buttons type="red">Sužinoti daugiau</Buttons>
-                        </CardActions>
-                    </Box>
-                </Card>
-            </Box>
+                            Curabitur et turpis vestibu. lum, ultricies urna vitae, lacinia est.
+                            Maecenas acvelit metus. Urab itur et turpis. Curabitur et turpis vestibu.
+                            lum, ultricies urna vitae, lacinia est.
+                            Maecenas acvelit mXetus. Urab itur et turpis.
+                            Curabitur et turpis vestibu. lum, ultricies urna vitae, lacinia est.
+                            Maecenas acvelit metus. Urab itur et turpis.
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Link to='/about'>
+                            <Button color="primary">
+                                <TfiArrowRight style={{ marginRight: '0.5rem' }} />
+                                Sužinoti daugiau
+                            </Button>
+                        </Link>
+                    </CardActions>
+                </Box>
+            </Card>
         </SideBox >
     );
 }
 
 export default AboutRigetaMain;
-
-

@@ -13,6 +13,9 @@ const theme = createTheme({
     secondary: {
       main: '#F1FAEE'
     },
+    warning: {
+      main: '#E63946'
+    }
   },
   components: {
     MuiToolbar: {
