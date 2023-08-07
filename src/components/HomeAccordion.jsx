@@ -1,7 +1,4 @@
-import { Typography } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
-import { SideBox } from "../helpers/StyledBox";
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
 import AccordionLogic from "./AccordionLogic";
 
 const accordionItems = [
@@ -23,19 +20,12 @@ const accordionItems = [
 ]
 
 const HomeAccordion = () => {
-    const theme = useTheme();
-    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <SideBox>
-            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
-                marginLeft: '1rem',
-                marginBottom: '2rem',
-                fontWeight: '400',
-                textAlign: 'center',
-            }}>
+            <TitleTypography>
                 Papildoma informacija
-            </Typography>
+            </TitleTypography>
             <AccordionLogic accordionItems={accordionItems}>
             </AccordionLogic>
         </SideBox>

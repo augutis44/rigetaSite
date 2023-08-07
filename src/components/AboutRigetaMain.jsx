@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography, useMediaQuery } from "@mui/material";
-import { SideBox } from "../helpers/StyledBox";
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
 import { TfiArrowRight } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';
@@ -7,18 +7,12 @@ import { useTheme } from '@mui/material/styles';
 const AboutRigetaMain = () => {
     const theme = useTheme();
     const isDownLg = useMediaQuery(theme.breakpoints.down('lg'));
-    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <SideBox>
-            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
-                marginLeft: '1rem',
-                marginBottom: '2rem',
-                fontWeight: '400',
-                textAlign: 'center'
-            }}>
+            <TitleTypography>
                 Apie „Rigeta“
-            </Typography>
+            </TitleTypography>
             <Card sx={{
                 display: 'flex',
                 flexDirection: { xs: 'column', md: 'row-reverse' }//nuo maziausio xs rezio iki md maziausio rezio

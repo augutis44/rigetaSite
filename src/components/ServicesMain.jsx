@@ -1,23 +1,15 @@
-import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
-import { SideBox } from "../helpers/StyledBox";
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Grid} from "@mui/material";
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
 import ServiceHomeCard from "./ServiceHomeCard";
 import { Link } from "react-router-dom";
 
 const ServicesMain = () => {
-    const theme = useTheme();
-    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <SideBox>
-            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
-                marginLeft: '1rem',
-                marginBottom: '2rem',
-                fontWeight: '400',
-                textAlign: 'center'
-            }}>
+            <TitleTypography>
                 Paslaugos
-            </Typography>
+            </TitleTypography>
             <Grid container spacing={2} sx={{
                 display: 'flex',
                 flexWrap: 'nowrap',

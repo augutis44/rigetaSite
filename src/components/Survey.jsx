@@ -1,8 +1,10 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import { useState } from "react";
-import InformationRigeta from "./InformacionRigeta"
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
+
+
 
 const Survey = () => {
     const [name, setName] = useState('');
@@ -43,74 +45,52 @@ const Survey = () => {
     }
 
     return (
-        <>
-            <Typography variant="h2" sx={{
-                textAlign: 'center'
-            }}>
-                SUSISIEKITE
-            </Typography>
-            <Box sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
-                <Box
-                    component="form"
-                    sx={{
-                        '& .MuiTextField-root': { margin: '0.5rem 0rem', width: '100%' },
-                        marginBottom: '3rem',
-                    }}
-                    noValidate
-                    autoComplete="off"
-                >
-                    <Box sx={{
-                        padding: '0rem 2rem'
-                    }}>
-                        <Box sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'flex-start',
-                        }}>
-                            <TextField
-                                id='name'
-                                required
-                                label="Vardas"
-                                onChange={textFieldChange}
-                                value={name}
-                            />
-                            <TextField
-                                id='surname'
-                                label="Pavardė"
-                                onChange={textFieldChange}
-                                value={surname}
-                            />
-                            <TextField
-                                id='email'
-                                required
-                                label="El.paštas"
-                                onChange={textFieldChange}
-                                value={email}
-                            />
-                            <TextField
-                                id='question'
-                                required
-                                label="Klausimas"
-                                multiline
-                                rows={4}
-                                onChange={textFieldChange}
-                                value={question}
-                            />
-                            <Button variant="contained" color="primary" onClick={handleClick} sx={{
-                                color: '#ffffff'
-                            }}>
-                                Susisiekti
-                            </Button>
-                        </Box>
-                    </Box>
-                </Box >
-                <InformationRigeta />
+        <SideBox>
+            <TitleTypography>
+                Susisiekite
+            </TitleTypography>
+            <Box
+                component="form"
+                sx={{
+                    '& .MuiTextField-root': { margin: '0.5rem 0rem', width: '100%' },
+                }}
+                noValidate
+                autoComplete="off"
+            >
+                <TextField
+                    id='name'
+                    required
+                    label="Vardas"
+                    onChange={textFieldChange}
+                    value={name}
+                />
+                <TextField
+                    id='surname'
+                    label="Pavardė"
+                    onChange={textFieldChange}
+                    value={surname}
+                />
+                <TextField
+                    id='email'
+                    required
+                    label="El.paštas"
+                    onChange={textFieldChange}
+                    value={email}
+                />
+                <TextField
+                    id='question'
+                    required
+                    label="Klausimas"
+                    multiline
+                    rows={4}
+                    onChange={textFieldChange}
+                    value={question}
+                />
+                <Button variant="contained" color="warning" onClick={handleClick}>
+                    Susisiekti
+                </Button>
             </Box>
-        </>
+        </SideBox>
     )
 }
 

@@ -1,23 +1,17 @@
 import { Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { SideBox } from "../helpers/StyledBox";
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
 
 
 const AboutBox = () => {
     const theme = useTheme();
     const isDownLg = useMediaQuery(theme.breakpoints.down('lg'));
-    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <SideBox>
-            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
-                marginLeft: '1rem',
-                marginBottom: '2rem',
-                fontWeight: '400',
-                textAlign: 'center'
-            }}>
+            <TitleTypography>
                 Apie "Rigeta"
-            </Typography>
+            </TitleTypography>
             <Typography gutterBottom variant={isDownLg ? 'h6' : 'h5'} sx={{
                 textAlign: 'justify'
             }}>
