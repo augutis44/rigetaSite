@@ -1,25 +1,31 @@
-import { Box, Typography } from "@mui/material";
+import { Card, Typography, useMediaQuery } from "@mui/material";
 import { SideBox } from "../helpers/StyledBox";
+import { useTheme } from '@mui/material/styles';
+
 
 const MainTitle = ({ children }) => {
+    const theme = useTheme();
+    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
-        <Box>
+        <Card sx={{
+            backgroundImage: "url('public/low-angle-shot-modern-business-building-touching-clear-sky.jpg')",
+            height: '15rem',
+            backgroundRepeat: 'round',
+            display: 'flex',
+            alignItems: 'center',
+        }}>
             <SideBox>
-                <Typography variant="h1" sx={{
+                <Typography variant={isDownSm ? 'h2' : 'h1'} sx={{
                     color: '#ffffff',
-                    position: 'absolute',
-                    margin: '5rem 0rem 0rem 0rem'
+                    marginTop: '5rem',
+                    marginLeft: '1rem'
                 }}>
                     {children}
                 </Typography>
             </SideBox>
-            <Box component='img' src='public\low-angle-shot-modern-business-building-touching-clear-sky.jpg'
-                sx={{
-                    width: '100%'
-                }}>
-            </Box>
-        </Box>
-    );
+        </Card>
+    )
 }
 
 export default MainTitle;

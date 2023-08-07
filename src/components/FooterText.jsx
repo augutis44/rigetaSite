@@ -5,8 +5,9 @@ const FooterText = ({ name, children }) => {
     return (
         <Box sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: 'center'
+            alignItems: 'center',
+            textAlign: 'center', 
+            flexDirection: 'column'
         }}>
             <Typography sx={{
                 fontWeight: 'bold'

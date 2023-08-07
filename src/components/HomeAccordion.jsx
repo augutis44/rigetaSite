@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { SideBox } from "../helpers/StyledBox";
 import useMediaQuery from '@mui/material/useMediaQuery';

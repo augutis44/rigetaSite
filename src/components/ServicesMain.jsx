@@ -48,7 +48,7 @@ const ServicesMain = () => {
                         backgroundColor: '#E63946',
                         color: '#FFFFFF',
                         padding: '0rem 2rem',
-                        fontSize: '2rem',
+                        fontSize: { xs: '1.5rem', md: '2rem' },
                         textTransform: 'capitalize',
                         boxShadow: '3',
                         fontWeight: '400',
