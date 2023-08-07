@@ -1,12 +1,9 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { SideBox } from "../helpers/StyledBox";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
-
-
-
 
 const reviews = [
     {
@@ -16,7 +13,7 @@ const reviews = [
     },
     {
         companyIndex: '1',
-        companyImage: 'public/Black & White Minimalist Business Logo.png',
+        companyImage: 'public/Black & White Minimalist Business Logo2.png',
         companyReview: 'Aenean gravida posuere neque vitae aliquet. Integer venenatis fringilla elit, in fringilla libero iaculis varius. Integer in mi porttitor nisi vulputate ullamcorper.'
     },
     {
@@ -24,7 +21,6 @@ const reviews = [
         companyImage: 'public/img.jpg',
         companyReview: 'Vestibulum sollicitudin quis diam eu sollicitudin. Mauris at diam cursus felis aliquet aliquam.'
     }
-
 ];
 
 const SlideShow = ({ interval }) => {
@@ -50,41 +46,36 @@ const SlideShow = ({ interval }) => {
 
     return (
         <SideBox>
-            <Grid sx={{
-                maxWidth: '62rem',
-                align: 'center',
-                margin: 'auto',
+            <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
+                marginLeft: '1rem',
+                marginBottom: '2rem',
+                fontWeight: '400',
+                textAlign: 'center'
             }}>
-                <Typography variant={isDownSm ? 'h4' : 'h2'} sx={{
-                    textAlign: 'center',
-                    fontWeight: '400',
-                    margin: '0rem 0rem 3rem'
-                }}>
-                    Atsiliepimai
-                </Typography>
-                <Box sx={{
-                    backgroundColor: '#ffffff',
-                    textAlign: 'center',
-                    padding: '2rem 0rem',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    minHeight: '14rem',
-                    border: '1px solid gray',
-                    borderRadius: '1rem'
+                Atsiliepimai
+            </Typography>
+            <Box sx={{
+                backgroundColor: '#ffffff',
+                textAlign: 'center',
+                padding: '2rem 0rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                minHeight: '18rem',
+                border: '1px solid gray',
+                borderRadius: '1rem'
 
-                }}>
-                    <Button onClick={goToNextSlide} style={{ backgroundColor: 'transparent' }}><SlArrowLeft /></Button>
-                    <Box>
-                        <Box sx={{
-                            margin: '0rem 0rem 2rem 0rem',
-                        }}>
-                            <Box component='img' src={reviews[index].companyImage}></Box>
-                        </Box>
-                        <Typography variant='h6'>{reviews[index].companyReview}</Typography>
+            }}>
+                <Button onClick={goToNextSlide} style={{ backgroundColor: 'transparent' }}><SlArrowLeft /></Button>
+                <Box>
+                    <Box sx={{
+                        margin: '0rem 0rem 2rem 0rem'
+                    }}>
+                        <Box component='img' src={reviews[index].companyImage}></Box>
                     </Box>
-                    <Button onClick={goToPrevSlide} style={{ backgroundColor: 'transparent' }}><SlArrowRight /></Button>
+                    <Typography variant={isDownSm ? 'body1' : 'h6'}>{reviews[index].companyReview}</Typography>
                 </Box>
-            </Grid>
+                <Button onClick={goToPrevSlide} style={{ backgroundColor: 'transparent' }}><SlArrowRight /></Button>
+            </Box>
         </SideBox>
     );
 

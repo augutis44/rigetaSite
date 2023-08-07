@@ -1,8 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { SideBox } from "../helpers/StyledBox";
 
 const PartnersMain = () => {
     return (
-        <Box>
+        <SideBox>
             <Typography variant="h2" sx={{
                 fontWeight: 'bold',
                 textAlign: 'center'
@@ -34,7 +35,7 @@ const PartnersMain = () => {
                     <Box component="img" src='public\img.jpg' />
                 </Grid>
             </Grid>
-        </Box>
+        </SideBox>
     );
 }
 

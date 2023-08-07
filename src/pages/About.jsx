@@ -6,7 +6,6 @@ import AppBarStyled from "../components/AppBarStyled";
 import MainTitle from "../components/MainTitle";
 import MapsAndAbout from "../components/MapsAndAbout";
 
-
 const About = () => {
 
     return (
@@ -25,6 +24,7 @@ const About = () => {
             <BackBox>
                 <MapsAndAbout />
             </BackBox>
+            <WhiteBox />
             <Footer />
         </>
     );
