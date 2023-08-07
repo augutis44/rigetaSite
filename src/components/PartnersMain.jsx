@@ -1,15 +1,14 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { SideBox } from "../helpers/StyledBox";
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
+
 
 const PartnersMain = () => {
+
     return (
         <SideBox>
-            <Typography variant="h2" sx={{
-                fontWeight: 'bold',
-                textAlign: 'center'
-            }}>
-                MUMIS PASITIKI
-            </Typography>
+            <TitleTypography>
+                Mumis pasitiki
+            </TitleTypography>
             <Typography variant="h5" sx={{
                 textAlign: 'center'
             }}>

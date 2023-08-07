@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
-import { Box } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+
 
 export const FlexBox = styled(Box)`
 display: flex;
@@ -33,5 +35,20 @@ export const BackBox = ({ children }) => {
         }}>
             {children}
         </Box>
+    )
+}
+
+export const TitleTypography = ({ children }) => {
+    const theme = useTheme();
+    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
+
+    return (
+        <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
+            marginBottom: '2rem',
+            fontWeight: '500',
+            textAlign: 'center'
+        }}>
+            {children}
+        </Typography>
     )
 }

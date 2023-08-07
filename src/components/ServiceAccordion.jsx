@@ -1,9 +1,8 @@
 import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from "@mui/material";
 import { useState } from "react";
 import { SlArrowRight } from "react-icons/sl";
-import { styled, useTheme } from '@mui/material/styles';
-import { SideBox } from "../helpers/StyledBox";
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { styled } from '@mui/material/styles';
+import { SideBox, TitleTypography } from "../helpers/StyledBox";
 
 const StyledAccordionSummary = ({ children }) => {
     return (
@@ -31,8 +30,6 @@ const CustomAccordion = styled(Accordion)(({ theme }) => {
 
 const ServiceAccordion = () => {
     const [expanded, setExpanded] = useState('panel1');
-    const theme = useTheme();
-    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleChange = (panel) => (event, newExpanded) => {
         setExpanded(newExpanded ? panel : false);
@@ -45,13 +42,9 @@ const ServiceAccordion = () => {
                 align: 'center',
                 margin: 'auto'
             }}>
-                <Typography variant={isDownSm ? 'h4' : 'h2'} sx={{
-                    textAlign: 'center',
-                    fontWeight: '400',
-                    margin: '0rem 0rem 3rem'
-                }}>
+                <TitleTypography>
                     Kitos Paslaugos
-                </Typography>
+                </TitleTypography>
                 <CustomAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                     <StyledAccordionSummary>
                         <Typography>Vyr. buhalterės konsultacija telefonu 30min</Typography>

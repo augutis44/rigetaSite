@@ -1,10 +1,10 @@
 
 import Footer from "../components/Footer";
 import Survey from "../components/Survey";
-import { Box } from "@mui/material";
 import AppBarStyled from "../components/AppBarStyled";
 import MainTitle from "../components/MainTitle";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
+import MapsAndAbout from "../components/MapsAndAbout";
 
 const Contacts = () => {
 
@@ -16,7 +16,11 @@ const Contacts = () => {
             <BackBox>
                 <Survey />
             </BackBox>
-
+            <WhiteBox />
+            <BackBox>
+                <MapsAndAbout />
+            </BackBox>
+            <WhiteBox />
             <Footer />
         </>
     );
