@@ -37,72 +37,66 @@ const ServiceAccordion = () => {
 
     return (
         <SideBox>
-            <Grid sx={{
-                maxWidth: '62rem',
-                align: 'center',
-                margin: 'auto'
-            }}>
-                <TitleTypography>
-                    Kitos Paslaugos
-                </TitleTypography>
-                <CustomAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                    <StyledAccordionSummary>
-                        <Typography>Vyr. buhalterės konsultacija telefonu 30min</Typography>
-                        <Typography>30€</Typography>
-                    </StyledAccordionSummary>
-                    <AccordionDetails>
-                        <Typography variant="body2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                            sit amet blandit leo lobortis eget.
-                        </Typography>
-                    </AccordionDetails>
-                </CustomAccordion>
-                <CustomAccordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
-                >
-                    <StyledAccordionSummary>
-                        <Typography>Vyr. buhalterės konsultacija gyvai 30min</Typography>
-                        <Typography>40€</Typography>
-                    </StyledAccordionSummary>
-                    <AccordionDetails>
-                        <Typography variant="body2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                            sit amet blandit leo lobortis eget.
-                        </Typography>
-                    </AccordionDetails>
-                </CustomAccordion>
-                <CustomAccordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                    <StyledAccordionSummary>
-                        <Typography>Projektų paraiškų pildymo konsultacija</Typography>
-                        <Typography>50€</Typography>
-                    </StyledAccordionSummary>
-                    <AccordionDetails>
-                        <Typography variant="body2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                            sit amet blandit leo lobortis eget.
-                        </Typography>
-                    </AccordionDetails>
-                </CustomAccordion>
-                <CustomAccordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                    <StyledAccordionSummary>
-                        <Typography>Dar kažkokia nuostabi paslauga</Typography>
-                        <Typography>100€</Typography>
-                    </StyledAccordionSummary>
-                    <AccordionDetails>
-                        <Typography variant="body2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                            sit amet blandit leo lobortis eget.
-                        </Typography>
-                    </AccordionDetails>
-                </CustomAccordion>
-            </Grid>
+            <TitleTypography>
+                Kitos Paslaugos
+            </TitleTypography>
+            <CustomAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                <StyledAccordionSummary>
+                    <Typography>Vyr. buhalterės konsultacija telefonu 30min</Typography>
+                    <Typography>30€</Typography>
+                </StyledAccordionSummary>
+                <AccordionDetails>
+                    <Typography variant="body2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                    </Typography>
+                </AccordionDetails>
+            </CustomAccordion>
+            <CustomAccordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
+            >
+                <StyledAccordionSummary>
+                    <Typography>Vyr. buhalterės konsultacija gyvai 30min</Typography>
+                    <Typography>40€</Typography>
+                </StyledAccordionSummary>
+                <AccordionDetails>
+                    <Typography variant="body2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                    </Typography>
+                </AccordionDetails>
+            </CustomAccordion>
+            <CustomAccordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                <StyledAccordionSummary>
+                    <Typography>Projektų paraiškų pildymo konsultacija</Typography>
+                    <Typography>50€</Typography>
+                </StyledAccordionSummary>
+                <AccordionDetails>
+                    <Typography variant="body2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                    </Typography>
+                </AccordionDetails>
+            </CustomAccordion>
+            <CustomAccordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                <StyledAccordionSummary>
+                    <Typography>Dar kažkokia nuostabi paslauga</Typography>
+                    <Typography>100€</Typography>
+                </StyledAccordionSummary>
+                <AccordionDetails>
+                    <Typography variant="body2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                    </Typography>
+                </AccordionDetails>
+            </CustomAccordion>
         </SideBox>
     )
 }

@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import ItemCard from "./ItemCard";
 import { SideBox, TitleTypography } from "../helpers/StyledBox";
 
@@ -24,23 +24,16 @@ const PacketCards = () => {
 
     return (
         <SideBox>
-            <Grid
-                sx={{
-                    maxWidth: '62rem',
-                    align: 'center',
-                    margin: 'auto'
-                }}>
-                <TitleTypography>
-                    Apskaitos paslaugų planai
-                </TitleTypography>
-                <Grid container spacing={2} sx={{
-                    align: 'center'
-                }}>
-                    {cardItems.map((cardItem) =>
-                        <ItemCard key={cardItem.label} label={cardItem.label} price={cardItem.price} content={cardItem.content}>
-                        </ItemCard>
-                    )}
-                </Grid>
+            <TitleTypography>
+                Apskaitos paslaugų planai
+            </TitleTypography>
+            <Grid container spacing={2} sx={{
+                align: 'center'
+            }}>
+                {cardItems.map((cardItem) =>
+                    <ItemCard key={cardItem.label} label={cardItem.label} price={cardItem.price} content={cardItem.content}>
+                    </ItemCard>
+                )}
             </Grid>
         </SideBox>
     )

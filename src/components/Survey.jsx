@@ -4,15 +4,13 @@ import Stack from '@mui/material/Stack';
 import { useState } from "react";
 import { SideBox, TitleTypography } from "../helpers/StyledBox";
 
-
-
 const Survey = () => {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
     const [question, setQuestion] = useState('');
 
-    const filledSurvey = `Mano vardas ${name} ${surname}. Noreciau paklausti: ${question}. Prasau susisiekti su manimi siuo el. pastu ${email}`
+    const filledSurvey = `Mano vardas ${name} ${surname}. Noreciau paklausti: ${question}. Prasau susisiekti su manimi siuo el. pastu ${email}`;
 
     const surveyAlert = () => {
         return (
@@ -20,7 +18,7 @@ const Survey = () => {
                 <Alert severity="success">This is a success alert — check it out!</Alert>
             </Stack>
         );
-    }
+    };
 
     const textFieldChange = () => {
         switch (event.target.id) {
@@ -37,12 +35,12 @@ const Survey = () => {
                 setQuestion(event.target.value);
                 break;
         }
-    }
+    };
 
     const handleClick = () => {
         surveyAlert();
         console.log(filledSurvey);
-    }
+    };
 
     return (
         <SideBox>
@@ -91,8 +89,7 @@ const Survey = () => {
                 </Button>
             </Box>
         </SideBox>
-    )
+    );
 }
 
 export default Survey;
-

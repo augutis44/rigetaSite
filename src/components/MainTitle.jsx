@@ -1,7 +1,5 @@
-import { Card, Typography, useMediaQuery } from "@mui/material";
-import { SideBox } from "../helpers/StyledBox";
+import { Box, Card, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-
 
 const MainTitle = ({ children }) => {
     const theme = useTheme();
@@ -15,7 +13,9 @@ const MainTitle = ({ children }) => {
             display: 'flex',
             alignItems: 'center',
         }}>
-            <SideBox>
+            <Box sx={{
+                marginLeft: { sm: '2rem', md: '5rem', lg: '10rem' }
+            }}>
                 <Typography variant={isDownSm ? 'h2' : 'h1'} sx={{
                     color: '#ffffff',
                     marginTop: '5rem',
@@ -23,7 +23,7 @@ const MainTitle = ({ children }) => {
                 }}>
                     {children}
                 </Typography>
-            </SideBox>
+            </Box>
         </Card>
     )
 }
