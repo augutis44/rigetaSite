@@ -5,11 +5,13 @@ import AppBarStyled from "../components/AppBarStyled";
 import MainTitle from "../components/MainTitle";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import MapsAndAbout from "../components/MapsAndAbout";
+import { ScrollToTop } from "../components/ScrollToTop";
 
 const Contacts = () => {
 
     return (
         <>
+            <ScrollToTop />
             <AppBarStyled />
             <MainTitle>Susisiekite</MainTitle>
             <WhiteBox />

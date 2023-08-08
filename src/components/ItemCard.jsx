@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { ColumnFlexBox } from "../helpers/StyledBox";
 import Buttons from "./Buttons";
 
@@ -45,16 +45,24 @@ const ItemCard = ({ label, price, content }) => {
                     }}>
                         Kaina vienam mėnesiui
                     </Typography>
-                    <Buttons type='red' sx={{
-                        margin: '2rem 0rem'
+                    <Button variant="contained" sx={{
+                        backgroundColor: '#E63946',
+                        margin: '2rem 0rem',
+                        textTransform: 'capitalize',
+                        boxShadow: '3',
+                        fontWeight: '400',
+                        '&:hover': {
+                            backgroundColor: '#f8847f',
+                            color: '#FFFFFF',
+                        }
                     }}>
                         <Typography variant='h5' sx={{
                             textTransform: 'none',
-                            padding: '0.3rem 1rem'
+                            padding: '0.3rem 1rem',
                         }}>
                             Susisiekti
                         </Typography>
-                    </Buttons>
+                    </Button>
                 </Box>
                 <Box id='secondHalf' sx={{
                     borderStyle: 'solid',
