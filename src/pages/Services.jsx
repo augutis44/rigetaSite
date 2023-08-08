@@ -5,11 +5,13 @@ import ServiceAccordion from "../components/ServiceAccordion";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import MainTitle from "../components/MainTitle";
 import AppBarStyled from "../components/AppBarStyled";
+import { ScrollToTop } from "../components/ScrollToTop";
 
 const Services = () => {
 
     return (
         <>
+            <ScrollToTop />
             <AppBarStyled />
             <MainTitle>Paslaugos</MainTitle>
             <WhiteBox />

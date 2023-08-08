@@ -6,11 +6,13 @@ import ServicesMain from "../components/ServicesMain";
 import HomeAccordion from "../components/HomeAccordion";
 import AppBarStyled from "../components/AppBarStyled";
 import PartnersMain from "../components/PartnersMain";
+import { ScrollToTop } from "../components/ScrollToTop";
 
 const Home = () => {
 
     return (
         <>
+            <ScrollToTop/>
             <AppBarStyled />
             <MainPhoto />
             <WhiteBox />
