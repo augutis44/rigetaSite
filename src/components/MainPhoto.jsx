@@ -4,12 +4,12 @@ import { useTheme } from '@mui/material/styles';
 
 const MainPhoto = () => {
     const theme = useTheme();
-    const isDownSm = useMediaQuery(theme.breakpoints.down('md'));
+    const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <Card
             sx={{
-                backgroundImage: isDownSm ? "url('public/pexels-andrea-piacquadio-3770194 - Copy.jpg')" : "url('public/pexels-andrea-piacquadio-3770194.jpg')",
+                backgroundImage: isDownMd ? "url('public/pexels-andrea-piacquadio-3770194 - Copy.jpg')" : "url('public/pexels-andrea-piacquadio-3770194.jpg')",
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',

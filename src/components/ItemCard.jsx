@@ -1,7 +1,6 @@
 import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { ColumnFlexBox } from "../helpers/StyledBox";
-import Buttons from "./Buttons";
-
+import { Link } from "react-router-dom";
 
 const ItemCard = ({ label, price, content }) => {
     return (
@@ -45,24 +44,26 @@ const ItemCard = ({ label, price, content }) => {
                     }}>
                         Kaina vienam mėnesiui
                     </Typography>
-                    <Button variant="contained" sx={{
-                        backgroundColor: '#E63946',
-                        margin: '2rem 0rem',
-                        textTransform: 'capitalize',
-                        boxShadow: '3',
-                        fontWeight: '400',
-                        '&:hover': {
-                            backgroundColor: '#f8847f',
-                            color: '#FFFFFF',
-                        }
-                    }}>
-                        <Typography variant='h5' sx={{
-                            textTransform: 'none',
-                            padding: '0.3rem 1rem',
+                    <Link to='/contacts'>
+                        <Button variant="contained" sx={{
+                            backgroundColor: '#E63946',
+                            margin: '2rem 0rem',
+                            textTransform: 'capitalize',
+                            boxShadow: '3',
+                            fontWeight: '400',
+                            '&:hover': {
+                                backgroundColor: '#f8847f',
+                                color: '#FFFFFF',
+                            }
                         }}>
-                            Susisiekti
-                        </Typography>
-                    </Button>
+                            <Typography variant='h5' sx={{
+                                textTransform: 'none',
+                                padding: '0.3rem 1rem',
+                            }}>
+                                Susisiekti
+                            </Typography>
+                        </Button>
+                    </Link>
                 </Box>
                 <Box id='secondHalf' sx={{
                     borderStyle: 'solid',
@@ -72,7 +73,6 @@ const ItemCard = ({ label, price, content }) => {
                     textAlign: 'center',
                     backgroundColor: '#ffffff',
                     borderRadius: '0rem 0rem 0.5rem 0.5rem'
-
                 }}>
                     <Box sx={{
                         margin: '0.5rem',
