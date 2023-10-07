@@ -8,17 +8,17 @@ import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 const reviews = [
     {
         companyIndex: '0',
-        companyImage: '/static/zaliaframes.png',
+        companyImage: '/zaliaframes.png',
         companyReview: 'Quisque nec dignissim orci, id mattis lectus. Nam efficitur vel purus sit amet porta. Pellentesque nec purus eros. Nam efficitur vel purus sit amet porta. Pellentesque nec purus eros.'
     },
     {
         companyIndex: '1',
-        companyImage: '/static/Black & White Minimalist Business Logo2.png',
+        companyImage: '/Black & White Minimalist Business Logo2.png',
         companyReview: 'Aenean gravida posuere neque vitae aliquet. Integer venenatis fringilla elit, in fringilla libero iaculis varius. Integer in mi porttitor nisi vulputate ullamcorper.'
     },
     {
         companyIndex: '2',
-        companyImage: '/static/img.jpg',
+        companyImage: '/img.jpg',
         companyReview: 'Vestibulum sollicitudin quis diam eu sollicitudin. Mauris at diam cursus felis aliquet aliquam.'
     }
 ];
