@@ -7,7 +7,7 @@ const MainTitle = ({ children }) => {
 
     return (
         <Card sx={{
-            backgroundImage: "url('public/low-angle-shot-modern-business-building-touching-clear-sky.jpg')",
+            backgroundImage: "url('static/low-angle-shot-modern-business-building-touching-clear-sky.jpg')",
             height: '15rem',
             backgroundRepeat: 'round',
             display: 'flex',

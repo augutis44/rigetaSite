@@ -20,7 +20,7 @@ const AboutRigetaMain = () => {
                 <CardMedia
                     component='img'
                     alt='two people sitting in the office'
-                    image='public/two-business-partners-working-together-office.jpg' sx={{
+                    image='static/two-business-partners-working-together-office.jpg' sx={{
                         maxHeight: '30rem',
                     }}
                 />
