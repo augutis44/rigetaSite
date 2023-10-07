@@ -13,7 +13,7 @@ const ServiceHomeCard = ({ title, children }) => {
             <CardMedia
                 component="img"
                 maxHeight="140"
-                image="static/flat-lay-payroll-concept-with-document.jpg"
+                image="/static/flat-lay-payroll-concept-with-document.jpg"
             />
             <CardContent>
                 <Typography gutterBottom variant={isDownLg ? 'h4' : 'h3'}>

@@ -9,7 +9,7 @@ const MainPhoto = () => {
     return (
         <Card
             sx={{
-                backgroundImage: isDownMd ? "url('static/pexels-andrea-piacquadio-3770194 - Copy.jpg')" : "url('static/pexels-andrea-piacquadio-3770194.jpg')",
+                backgroundImage: isDownMd ? "url('/static/pexels-andrea-piacquadio-3770194 - Copy.jpg')" : "url('/static/pexels-andrea-piacquadio-3770194.jpg')",
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',

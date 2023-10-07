@@ -15,7 +15,7 @@ const MapsAndAbout = () => {
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                <Box component='img' src='static/Capture.JPG' sx={{
+                <Box component='img' src='/static/Capture.JPG' sx={{
                     maxWidth: { xs: '20rem', md: '25rem' },
                 }}></Box>
                 <Box sx={{
