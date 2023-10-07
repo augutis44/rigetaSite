@@ -22,16 +22,16 @@ const PartnersMain = () => {
                 justifyContent: 'space-between'
             }}>
                 <Grid item>
-                    <Box component="img" src='/public/download.jpg' />
+                    <Box component="img" src='public/download.jpg' />
                 </Grid>
                 <Grid item>
-                    <Box component="img" src='/public/zaliaframes.png' />
+                    <Box component="img" src='public/zaliaframes.png' />
                 </Grid>
                 <Grid item>
-                    <Box component="img" src='/public/Black & White Minimalist Business Logo.png' />
+                    <Box component="img" src='public/Black & White Minimalist Business Logo.png' />
                 </Grid>
                 <Grid item>
-                    <Box component="img" src='/public/img.jpg' />
+                    <Box component="img" src='public/img.jpg' />
                 </Grid>
             </Grid>
         </SideBox>
