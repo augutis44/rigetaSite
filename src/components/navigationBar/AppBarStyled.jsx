@@ -67,8 +67,6 @@ const AppBarStyled = () => {
                     }}
             >
 
-
-
                 <Typography
                     sx={styles}
                 >

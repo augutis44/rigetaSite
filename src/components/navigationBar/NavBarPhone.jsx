@@ -15,7 +15,7 @@ const linkStyle = {
     textTransform: 'uppercase',
     padding: '1.5rem',
     borderBottom: '1px solid #274367',
-    
+
 }
 
 const NavBarPhone = ({ renderedLinks }) => {
