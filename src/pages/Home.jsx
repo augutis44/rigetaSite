@@ -4,7 +4,7 @@ import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import AboutRigetaMain from "../components/AboutRigetaMain";
 import ServicesMain from "../components/ServicesMain";
 import HomeAccordion from "../components/HomeAccordion";
-import AppBarStyled from "../components/AppBarStyled";
+import AppBarStyled from "../components/navigationBar/AppBarStyled";
 import PartnersMain from "../components/PartnersMain";
 import { ScrollToTop } from "../components/ScrollToTop";
 

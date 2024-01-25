@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import AboutBox from "../components/AboutBox";
 import SlideShow from "../components/SlideShow";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
-import AppBarStyled from "../components/AppBarStyled";
+import AppBarStyled from "../components/navigationBar/AppBarStyled";
 import MainTitle from "../components/MainTitle";
 import MapsAndAbout from "../components/MapsAndAbout";
 import { ScrollToTop } from "../components/ScrollToTop";

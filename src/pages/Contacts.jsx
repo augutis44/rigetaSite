@@ -1,7 +1,7 @@
 
 import Footer from "../components/Footer";
 import Survey from "../components/Survey";
-import AppBarStyled from "../components/AppBarStyled";
+import AppBarStyled from "../components/navigationBar/AppBarStyled";
 import MainTitle from "../components/MainTitle";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import MapsAndAbout from "../components/MapsAndAbout";
