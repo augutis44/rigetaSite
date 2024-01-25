@@ -39,9 +39,10 @@ const NavBarPhone = ({ renderedLinks }) => {
                         to='/'
                         style={{
                             display: 'flex',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            width: 'fit-content'
                         }}>
-                        <RegitaLogo variant='white' width="205px" height="55px" />
+                        <RegitaLogo variant='white' width="10rem" height="3rem" />
                     </NavLink>
                 </Box>
 
