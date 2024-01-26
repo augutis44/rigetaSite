@@ -1,4 +1,4 @@
-import MainPhoto from "../components/MainPhoto";
+import MainPhoto from "../components/header/MainPhoto";
 import Footer from "../components/Footer";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import AboutRigetaMain from "../components/AboutRigetaMain";

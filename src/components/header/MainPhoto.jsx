@@ -1,5 +1,5 @@
 import { Card, Typography, useMediaQuery } from '@mui/material';
-import RegitaLogo from '../icons/RegitaLogo';
+import RegitaLogo from '../../icons/RegitaLogo';
 import { useTheme } from '@mui/material/styles';
 
 const MainPhoto = () => {
