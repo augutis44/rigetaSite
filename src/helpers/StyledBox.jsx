@@ -55,3 +55,13 @@ export const TitleTypography = ({ children }) => {
         </Typography>
     )
 }
+
+export const Container = ({ children }) => {
+    return (
+        <Box sx={{
+            paddingX: { xs: "1rem", sm: "2rem", md: "4rem", lg: "8rem", xl: "12rem" }
+        }}>
+            {children}
+        </Box>
+    )
+}
