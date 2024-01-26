@@ -9,6 +9,7 @@ import { IoHomeSharp } from "react-icons/io5";
 import { MdMessage } from "react-icons/md";
 import { IoPerson } from "react-icons/io5";
 import { FaBook } from "react-icons/fa";
+import { Container } from '../../helpers/StyledBox';
 
 const links = [
     {
@@ -91,24 +92,26 @@ const AppBarStyled = () => {
     });
 
     return (
+
         <AppBar sx={{
-            padding: { xs: '1rem', md: '1rem 4rem', lg: '1rem 8rem', xl: '1rem 16rem' },
+            paddingY: '1rem',
             position: 'fixed',
             backgroundColor: scrolling ? 'rgba(39, 67, 103, 1)' : 'rgba(39, 67, 103, 0.7)',
             transition: 'background-color 0.7s',
         }}>
+            <Container>
+                <NavBarPhone
+                    renderedLinks={renderedLinks}
+                    scrolling={scrolling}
+                />
 
-            <NavBarPhone
-                renderedLinks={renderedLinks}
-                scrolling={scrolling}
-            />
-
-            <NavBarPc
-                renderedLinks={renderedLinks}
-                scrolling={scrolling}
-            />
-
+                <NavBarPc
+                    renderedLinks={renderedLinks}
+                    scrolling={scrolling}
+                />
+            </Container>
         </AppBar>
+
     )
 }
 
