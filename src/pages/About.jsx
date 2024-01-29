@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import AboutBox from "../components/AboutBox";
 import SlideShow from "../components/SlideShow";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
@@ -20,7 +20,7 @@ const About = () => {
             </BackBox>
             <WhiteBox />
             <BackBox>
-                <SlideShow interval={5000} />
+                <SlideShow />
             </BackBox>
             <WhiteBox />
             <BackBox>

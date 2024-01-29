@@ -1,40 +1,39 @@
-import { Typography, useMediaQuery } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
+import { Typography } from "@mui/material";
 import { SideBox, TitleTypography } from "../helpers/StyledBox";
 
-
 const AboutBox = () => {
-    const theme = useTheme();
-    const isDownLg = useMediaQuery(theme.breakpoints.down('lg'));
 
     return (
         <SideBox>
+
             <TitleTypography>
-                Apie "Rigeta"
+                Apie MB „Rigeta“
             </TitleTypography>
-            <Typography gutterBottom variant={isDownLg ? 'h6' : 'h5'} sx={{
+
+            <Typography paragraph sx={{
                 textAlign: 'justify'
             }}>
-                <b>Mūsų misija</b> - Nulla facilisi. Nam scelerisque blandit faucibus.
-                Ut lobortis sollicitudin imperdiet Vivamus luctus fringilla sodales.
+                Įmonė veikia nuo 2016 metų. Mūsų paslaugas perka 35 įmonės , kurios yra
+                iš įvairių pramonės šakų ir dydžių. Mes nerenkame savo klientų pagal
+                teritorinius apribojimus, jų veikla apima visą Lietuvos teritoriją.
+                <br />
+                <br />
+                Esame patyrusių, kvalifikuotų, atsakingų specialistų komanda, kuri įsipareigoja
+                teikti aukšto lygio paslaugas savo klientams. Komandos darbuotojų patirtis
+                apskaitos srityje nuo 1992 m. Mūsų ilgametė patirtis apskaitos srityje leidžia
+                mums pasiūlyti individualizuotus sprendimus, pritaikytus kiekvienos įmonės poreikiams.
+                <br />
+                <br />
+                MB „Rigeta“ specializuojasi organizuojant ir tvarkant įmonių ir įstaigų finansinę
+                apskaitą. Taip pat teikiame konsultacijas bei pasiūlymus susijusius su buhalterine
+                ir mokestine apskaita. Mūsų tikslas - padėti klientams pasiekti sėkmę jų verslo
+                srityje ir užtikrinti sklandų finansinį valdymą.
+                <br />
+                <br />
+                Mes įsipareigoję užtikrinti, kad mūsų klientai jaustųsi saugūs ir pasitikintys savo
+                finansų tvarkymu, o mes stengiamės būti patikimu ir patyrusiu partneriu jų verslo sėkmei.
             </Typography>
-            <Typography paragraph variant={isDownLg ? 'body1' : 'h6'} sx={{
-                textAlign: 'justify'
-            }}>
-                In quis felis nisi. Quisque vestibulum auctor egestas. Pellentesque
-                commodo massa nec urna volutpat, ac commodo ipsum pellentesque. Nulla
-                tempor volutpat dui ut faucibus. Cras malesuada sem eget est gravida
-                bibendum. Nam egestas orci in arcu blandit, id cursus dolor condimentum.
-                Nam elementum aliquam pretium. Nunc porta mi lorem, a congue mauris
-                sollicitudin ac.
-            </Typography>
-            <Typography paragraph variant={isDownLg ? 'body1' : 'h6'} sx={{
-                textAlign: 'justify'
-            }}>
-                Cras malesuada sem eget est gravida bibendum. Nam egestas orci in arcu
-                blandit, id cursus dolor condimentum. Nam elementum aliquam pretium. Nunc
-                porta mi lorem, a congue mauris sollicitudin.
-            </Typography>
+
         </SideBox>
     )
 }

@@ -11,17 +11,17 @@ const AboutRigetaMain = () => {
     return (
         <SideBox>
             <TitleTypography>
-                Apie „Rigeta“
+                Apie MB „Rigeta“
             </TitleTypography>
             <Card sx={{
                 display: 'flex',
-                flexDirection: { xs: 'column', md: 'row-reverse' }//nuo maziausio xs rezio iki md maziausio rezio
+                flexDirection: { xs: 'column', md: 'row-reverse' }
             }}>
                 <CardMedia
                     component='img'
                     alt='two people sitting in the office'
                     image='/two-business-partners-working-together-office.jpg' sx={{
-                        maxHeight: '30rem',
+                        maxheight: '30rem',
                     }}
                 />
                 <Box sx={{
@@ -32,21 +32,20 @@ const AboutRigetaMain = () => {
                     <CardContent sx={{
                         minWidth: { xs: '100%', md: '50%' }
                     }}>
-                        <Typography variant={isDownLg ? 'h4' : 'h3'}>
-                            Rita Kraujalienė
-                        </Typography>
-                        <Typography gutterBottom variant={isDownLg ? 'h6' : 'h5'} color="text.primary">
-                            UAB „Rigeta“ vadovė
-                        </Typography>
+
                         <Typography paragraph variant={isDownLg ? 'body1' : 'h6'} color="text.primary" sx={{
                             marginRight: '3rem',
                         }}>
-                            Curabitur et turpis vestibu. lum, ultricies urna vitae, lacinia est.
-                            Maecenas acvelit metus. Urab itur et turpis. Curabitur et turpis vestibu.
-                            lum, ultricies urna vitae, lacinia est.
-                            Maecenas acvelit mXetus. Urab itur et turpis.
-                            Curabitur et turpis vestibu. lum, ultricies urna vitae, lacinia est.
-                            Maecenas acvelit metus. Urab itur et turpis.
+                            Įmonė veikia nuo 2016 metų. Mūsų paslaugas perka 35 įmonės , kurios yra iš įvairių
+                            pramonės šakų ir dydžių. Mes nerenkame savo klientų pagal teritorinius apribojimus,
+                            jų veikla apima visą Lietuvos teritoriją.
+                            <br />
+                            <br />
+                            Esame patyrusių, kvalifikuotų, atsakingų
+                            specialistų komanda, kuri įsipareigoja teikti aukšto lygio paslaugas savo klientams.
+                            Komandos darbuotojų patirtis apskaitos srityje nuo 1992 m. Mūsų ilgametė patirtis
+                            apskaitos srityje leidžia mums pasiūlyti individualizuotus sprendimus, pritaikytus
+                            kiekvienos įmonės poreikiams.
                         </Typography>
                     </CardContent>
                     <CardActions>
