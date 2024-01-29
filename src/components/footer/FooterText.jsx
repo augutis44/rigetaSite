@@ -5,18 +5,18 @@ const FooterText = ({ name, children }) => {
     return (
         <Box sx={{
             display: 'flex',
-            alignItems: 'center',
-            textAlign: 'center', 
             flexDirection: 'column'
         }}>
             <Typography sx={{
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                textAlign: {xs: 'center', md: 'left'},
+                letterSpacing: '1px'
             }}>
                 {name}
             </Typography>
             <Typography gutterBottom sx={{
-                textAlign: 'center',
-                marginBottom: '1rem'
+                marginBottom: {xs: '1rem', md: '0'},
+                textAlign: {xs: 'center', md: 'left'}
             }}>
                 {children}
             </Typography>
