@@ -68,7 +68,7 @@ const AppBarStyled = () => {
                     }}
             >
 
-                <Typography
+                <Box
                     sx={styles}
                 >
                     {showIcon &&
@@ -81,12 +81,12 @@ const AppBarStyled = () => {
                             {link.icon}
                         </Box>}
 
-                    <Box sx={{
+                    <Typography sx={{
                         paddingLeft: { xs: '1rem', md: '0rem' }
                     }}>
                         {link.label}
-                    </Box>
-                </Typography>
+                    </Typography>
+                </Box>
             </NavLink >
         );
     });
