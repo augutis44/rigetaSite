@@ -12,7 +12,7 @@ const ServiceHomeCard = ({ title, children }) => {
         <Card>
             <CardMedia
                 component="img"
-                maxHeight="140"
+                maxheight="140"
                 image="/flat-lay-payroll-concept-with-document.jpg"
             />
             <CardContent>
