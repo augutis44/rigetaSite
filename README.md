@@ -17,7 +17,7 @@ The primary goal of the website is to provide essential information about the co
 
 ## Link to site
 
-[## Features](https://glistening-banoffee-211c1b.netlify.app/)
+[Rigeta site](https://glistening-banoffee-211c1b.netlify.app/)
 
 ## Project Author
 
