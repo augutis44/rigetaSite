@@ -6,6 +6,7 @@ Welcome to the GitHub repository for the Business Accounting Services Website pr
 
 This project is dedicated to creating a website for a company that offers accounting services to businesses. 
 The primary goal of the website is to provide essential information about the company, its services, and its professional activities.
+Design and development done by me.
 
 ## Features
 
@@ -31,18 +32,6 @@ To get a copy of this project up and running on your local machine, follow these
 
 3. Launch the `index.html` file in your web browser to view the website locally.
 
-## Contributing
+## Project Author
 
-We welcome contributions from the community to improve this project. If you'd like to contribute, please follow these steps:
-
-1. Fork the repository on GitHub.
-2. Make your changes in a new branch.
-3. Submit a pull request with a detailed description of your changes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.md).
-
-## Acknowledgements
-
-We would like to thank the contributors and open-source community for their valuable contributions and support.
+This project was designed and developed by Augustina.
