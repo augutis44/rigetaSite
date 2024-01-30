@@ -23,10 +23,12 @@ const reviews = [
     }
 ];
 
-const SlideShow = ({ interval }) => {
+const SlideShow = () => {
     const [index, setIndex] = useState(1);
     const theme = useTheme();
     const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
+
+    const interval = 5000;
 
     const goToNextSlide = () => {
         setIndex((prevIndex) => (prevIndex + 1) % reviews.length);
@@ -46,19 +48,21 @@ const SlideShow = ({ interval }) => {
 
     return (
         <SideBox>
+
             <TitleTypography>
                 Atsiliepimai
             </TitleTypography>
+
             <Box sx={{
                 backgroundColor: '#ffffff',
                 textAlign: 'center',
                 padding: '2rem 0rem',
                 display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'space-between',
-                minHeight: '18rem',
-                border: '1px solid gray',
+                minHeight: '16rem',
+                border: '3px solid gray',
                 borderRadius: '1rem'
-
             }}>
                 <Button onClick={goToNextSlide} style={{ backgroundColor: 'transparent' }}><SlArrowLeft /></Button>
                 <Box>
@@ -71,6 +75,7 @@ const SlideShow = ({ interval }) => {
                 </Box>
                 <Button onClick={goToPrevSlide} style={{ backgroundColor: 'transparent' }}><SlArrowRight /></Button>
             </Box>
+
         </SideBox>
     );
 

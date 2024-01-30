@@ -46,7 +46,7 @@ export const TitleTypography = ({ children }) => {
     const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <Typography variant={isDownSm ? 'h3' : 'h2'} sx={{
+        <Typography variant={'h3'} sx={{
             marginBottom: '2rem',
             fontWeight: '500',
             textAlign: 'center'

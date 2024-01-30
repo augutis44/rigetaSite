@@ -1,5 +1,5 @@
 
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import Survey from "../components/Survey";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";
 import MainTitle from "../components/MainTitle";

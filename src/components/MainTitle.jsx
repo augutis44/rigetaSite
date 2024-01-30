@@ -1,5 +1,6 @@
-import { Box, Card, Typography, useMediaQuery } from "@mui/material";
+import { Card, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import { Container } from "../helpers/StyledBox";
 
 const MainTitle = ({ children }) => {
     const theme = useTheme();
@@ -8,22 +9,21 @@ const MainTitle = ({ children }) => {
     return (
         <Card sx={{
             backgroundImage: "url('/low-angle-shot-modern-business-building-touching-clear-sky.jpg')",
-            height: '15rem',
+            height: '14rem',
             backgroundRepeat: 'round',
             display: 'flex',
             alignItems: 'center',
         }}>
-            <Box sx={{
-                marginLeft: { sm: '2rem', md: '5rem', lg: '10rem' }
-            }}>
+            <Container>
                 <Typography variant={isDownSm ? 'h2' : 'h1'} sx={{
                     color: '#ffffff',
-                    marginTop: '5rem',
+                    marginTop: '4rem',
                     marginLeft: '1rem'
                 }}>
                     {children}
                 </Typography>
-            </Box>
+            </Container>
+
         </Card>
     )
 }

@@ -13,7 +13,7 @@ const AlignedText = ({ children, type }) => {
     } else {
         return (
             <Typography sx={{
-                textAlign: { xs: 'center', md: 'center' }
+                textAlign: 'center'
             }}>
                 {children}
             </Typography>)

@@ -1,5 +1,5 @@
 
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import PacketCards from "../components/PacketCards";
 import ServiceAccordion from "../components/ServiceAccordion";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
