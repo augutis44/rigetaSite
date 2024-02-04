@@ -1,6 +1,6 @@
 
 import Footer from "../components/footer/Footer";
-import Survey from "../components/Survey";
+import Survey from "../components/form/Survey";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";
 import MainTitle from "../components/MainTitle";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";

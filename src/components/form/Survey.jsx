@@ -2,7 +2,7 @@ import { Box, Button, TextField } from "@mui/material";
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import { useState } from "react";
-import { Container, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../../helpers/StyledBox";
 
 const Survey = () => {
     const [name, setName] = useState('');
