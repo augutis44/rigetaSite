@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import ItemCard from "./ItemCard";
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 
 const cardItems = [
     {
@@ -23,7 +23,7 @@ const cardItems = [
 const PacketCards = () => {
 
     return (
-        <SideBox>
+        <Container>
             <TitleTypography>
                 Apskaitos paslaugų planai
             </TitleTypography>
@@ -35,7 +35,7 @@ const PacketCards = () => {
                     </ItemCard>
                 )}
             </Grid>
-        </SideBox>
+        </Container>
     )
 }
 

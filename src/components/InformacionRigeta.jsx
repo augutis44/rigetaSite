@@ -1,11 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const AlignedText = ({ children, type }) => {
 
     if (type === 'title') {
         return (
             <Typography variant='h6' sx={{
-                textAlign: { xs: 'center', md: 'center' }
+                textAlign: { xs: 'center', md: 'left' }
             }}>
                 {children}
             </Typography>
@@ -13,7 +13,7 @@ const AlignedText = ({ children, type }) => {
     } else {
         return (
             <Typography sx={{
-                textAlign: 'center'
+                textAlign: { xs: 'center', md: 'left' }
             }}>
                 {children}
             </Typography>)

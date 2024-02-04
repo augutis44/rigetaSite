@@ -1,11 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 
 
 const PartnersMain = () => {
 
     return (
-        <SideBox>
+        <Container>
             <TitleTypography>
                 Mumis pasitiki
             </TitleTypography>
@@ -34,7 +34,7 @@ const PartnersMain = () => {
                     <Box component="img" src='/img.jpg' />
                 </Grid>
             </Grid>
-        </SideBox>
+        </Container>
     );
 }
 

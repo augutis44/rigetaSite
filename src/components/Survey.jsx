@@ -2,7 +2,7 @@ import { Box, Button, TextField } from "@mui/material";
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import { useState } from "react";
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 
 const Survey = () => {
     const [name, setName] = useState('');
@@ -43,7 +43,7 @@ const Survey = () => {
     };
 
     return (
-        <SideBox>
+        <Container>
             <TitleTypography>
                 Susisiekite
             </TitleTypography>
@@ -88,7 +88,7 @@ const Survey = () => {
                     Susisiekti
                 </Button>
             </Box>
-        </SideBox>
+        </Container>
     );
 }
 

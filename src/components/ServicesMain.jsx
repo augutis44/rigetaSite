@@ -1,5 +1,5 @@
 import { Box, Button, Grid} from "@mui/material";
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 import ServiceHomeCard from "./ServiceHomeCard";
 import { Link } from "react-router-dom";
 import { Height } from "@mui/icons-material";
@@ -7,7 +7,7 @@ import { Height } from "@mui/icons-material";
 const ServicesMain = () => {
 
     return (
-        <SideBox>
+        <Container>
             <TitleTypography>
                 Paslaugos
             </TitleTypography>
@@ -54,7 +54,7 @@ const ServicesMain = () => {
                     </Button>
                 </Link>
             </Box>
-        </SideBox>
+        </Container>
     );
 }
 

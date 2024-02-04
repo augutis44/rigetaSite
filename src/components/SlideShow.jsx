@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 const reviews = [
@@ -47,7 +47,7 @@ const SlideShow = () => {
     }, [reviews, interval]);
 
     return (
-        <SideBox>
+        <Container>
 
             <TitleTypography>
                 Atsiliepimai
@@ -76,7 +76,7 @@ const SlideShow = () => {
                 <Button onClick={goToPrevSlide} style={{ backgroundColor: 'transparent' }}><SlArrowRight /></Button>
             </Box>
 
-        </SideBox>
+        </Container>
     );
 
 }

@@ -1,4 +1,4 @@
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 import AccordionLogic from "./AccordionLogic";
 
 const accordionItems = [
@@ -22,13 +22,13 @@ const accordionItems = [
 const HomeAccordion = () => {
 
     return (
-        <SideBox>
+        <Container>
             <TitleTypography>
                 Papildoma informacija
             </TitleTypography>
             <AccordionLogic accordionItems={accordionItems}>
             </AccordionLogic>
-        </SideBox>
+        </Container>
     )
 }
 

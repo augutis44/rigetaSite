@@ -2,7 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from 
 import { useState } from "react";
 import { SlArrowRight } from "react-icons/sl";
 import { styled } from '@mui/material/styles';
-import { SideBox, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../helpers/StyledBox";
 
 const StyledAccordionSummary = ({ children }) => {
     return (
@@ -36,7 +36,7 @@ const ServiceAccordion = () => {
     };
 
     return (
-        <SideBox>
+        <Container>
             <TitleTypography>
                 Kitos Paslaugos
             </TitleTypography>
@@ -97,7 +97,7 @@ const ServiceAccordion = () => {
                     </Typography>
                 </AccordionDetails>
             </CustomAccordion>
-        </SideBox>
+        </Container>
     )
 }
 
