@@ -1,5 +1,5 @@
 import Footer from "../components/footer/Footer";
-import AboutBox from "../components/AboutBox";
+import AboutBox from "../components/about/AboutBox";
 import SlideShow from "../components/SlideShow";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";

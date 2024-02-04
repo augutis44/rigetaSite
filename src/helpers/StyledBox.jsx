@@ -34,7 +34,7 @@ export const BackBox = ({ children }) => {
         <Box sx={{
             backgroundColor: '#F9F9F9',
             zIndex: '-1',
-            padding: '2rem'
+            paddingY: '2rem'
         }}>
             {children}
         </Box>
