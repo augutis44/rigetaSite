@@ -1,7 +1,7 @@
 import MainPhoto from "../components/header/MainPhoto";
 import Footer from "../components/footer/Footer";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
-import AboutRigetaMain from "../components/AboutRigetaMain";
+import AboutRigetaMain from "../components/about/AboutRigetaMain";
 import ServicesMain from "../components/ServicesMain";
 import HomeAccordion from "../components/HomeAccordion";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";
