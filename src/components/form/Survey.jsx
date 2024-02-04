@@ -1,23 +1,38 @@
 import { Box, Button, TextField } from "@mui/material";
 import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Container, TitleTypography } from "../../helpers/StyledBox";
+import emailjs from '@emailjs/browser';
 
 const Survey = () => {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
     const [question, setQuestion] = useState('');
+    const [showAlert, setShowAlert] = useState(false);
 
-    const filledSurvey = `Mano vardas ${name} ${surname}. Noreciau paklausti: ${question}. Prasau susisiekti su manimi siuo el. pastu ${email}`;
+    const form = useRef();
 
-    const surveyAlert = () => {
-        return (
-            <Stack sx={{ width: '100%' }} spacing={2}>
-                <Alert severity="success">This is a success alert — check it out!</Alert>
-            </Stack>
-        );
+    useEffect(() => {
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 10000);
+    }, [showAlert]);
+
+    const sendEmail = () => {
+
+        emailjs
+            .sendForm('service_h1w7fui', 'template_gv1xjfa', form.current, {
+                publicKey: 'iVf_V-a4kBv1UHw2l',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     };
 
     const textFieldChange = () => {
@@ -37,46 +52,67 @@ const Survey = () => {
         }
     };
 
-    const handleClick = () => {
-        surveyAlert();
-        console.log(filledSurvey);
+    const handleClick = (e) => {
+        e.preventDefault();
+
+        sendEmail();
+        setShowAlert(true);
+        setName('');
+        setSurname('');
+        setEmail('');
+        setQuestion('');
     };
 
     return (
         <Container>
+
             <TitleTypography>
                 Susisiekite
             </TitleTypography>
+
             <Box
                 component="form"
                 sx={{
-                    '& .MuiTextField-root': { margin: '0.5rem 0rem', width: '100%' },
+                    '& .MuiTextField-root': {
+                        margin: '0.5rem 0rem',
+                        width: '100%'
+                    },
                 }}
                 noValidate
                 autoComplete="off"
+                ref={form}
+                onSubmit={handleClick}
             >
+
                 <TextField
                     id='name'
+                    name="user_name"
                     required
                     label="Vardas"
                     onChange={textFieldChange}
                     value={name}
                 />
+
                 <TextField
                     id='surname'
+                    name="user_surname"
                     label="Pavardė"
                     onChange={textFieldChange}
                     value={surname}
                 />
+
                 <TextField
                     id='email'
+                    name="user_email"
                     required
                     label="El.paštas"
                     onChange={textFieldChange}
                     value={email}
                 />
+
                 <TextField
                     id='question'
+                    name="message"
                     required
                     label="Klausimas"
                     multiline
@@ -84,10 +120,21 @@ const Survey = () => {
                     onChange={textFieldChange}
                     value={question}
                 />
-                <Button variant="contained" color="warning" onClick={handleClick}>
+
+                {showAlert && (
+                    <Alert severity="success"
+                        sx={{
+                            marginY: '1rem'
+                        }}>
+                        Jūsų žinute gavome, greitu metu susisieksime.
+                    </Alert>
+                )}
+
+                <Button variant="contained" color="warning" type="submit">
                     Susisiekti
                 </Button>
             </Box>
+
         </Container>
     );
 }
