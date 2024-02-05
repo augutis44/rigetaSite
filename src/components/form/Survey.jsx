@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import Alert from '@mui/material/Alert';
 import { useEffect, useState, useRef } from "react";
 import { Container, TitleTypography } from "../../helpers/StyledBox";
@@ -8,6 +8,7 @@ const Survey = () => {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [question, setQuestion] = useState('');
     const [showAlert, setShowAlert] = useState(false);
 
@@ -46,6 +47,9 @@ const Survey = () => {
             case 'email':
                 setEmail(event.target.value);
                 break;
+            case 'phone':
+                setPhone(event.target.value);
+                break;
             case 'question':
                 setQuestion(event.target.value);
                 break;
@@ -60,6 +64,7 @@ const Survey = () => {
         setName('');
         setSurname('');
         setEmail('');
+        setPhone('');
         setQuestion('');
     };
 
@@ -70,13 +75,22 @@ const Survey = () => {
                 Susisiekite
             </TitleTypography>
 
+            <Typography sx={{
+                textAlign: 'center',
+                marginBottom: '1rem'
+            }}>
+                UŽPILDYKITE FORMĄ IR MES SU JUMIS SUSISIEKSIME
+            </Typography>
+
             <Box
                 component="form"
                 sx={{
                     '& .MuiTextField-root': {
                         margin: '0.5rem 0rem',
-                        width: '100%'
                     },
+                    maxWidth: '900px',
+                    width: '100%',
+                    margin: '0 auto'
                 }}
                 noValidate
                 autoComplete="off"
@@ -84,31 +98,67 @@ const Survey = () => {
                 onSubmit={handleClick}
             >
 
-                <TextField
-                    id='name'
-                    name="user_name"
-                    required
-                    label="Vardas"
-                    onChange={textFieldChange}
-                    value={name}
-                />
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' },
+                    gap: '10px'
+                }}>
+                    <TextField
+                        id='name'
+                        name="user_name"
+                        required
+                        label="Vardas"
+                        onChange={textFieldChange}
+                        value={name}
+                        sx={{
+                            width: '100%',
+                            background: 'white'
+                        }}
+                    />
 
-                <TextField
-                    id='surname'
-                    name="user_surname"
-                    label="Pavardė"
-                    onChange={textFieldChange}
-                    value={surname}
-                />
+                    <TextField
+                        id='surname'
+                        name="user_surname"
+                        label="Pavardė"
+                        onChange={textFieldChange}
+                        value={surname}
+                        sx={{
+                            width: '100%',
+                            background: 'white'
+                        }}
+                    />
+                </Box>
 
-                <TextField
-                    id='email'
-                    name="user_email"
-                    required
-                    label="El.paštas"
-                    onChange={textFieldChange}
-                    value={email}
-                />
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' },
+                    gap: '10px'
+                }}>
+                    <TextField
+                        id='email'
+                        name="user_email"
+                        required
+                        label="El.paštas"
+                        onChange={textFieldChange}
+                        value={email}
+                        sx={{
+                            width: '100%',
+                            background: 'white'
+                        }}
+                    />
+
+                    <TextField
+                        id='phone'
+                        name="user_phone"
+                        label="Tel. nr"
+                        onChange={textFieldChange}
+                        value={phone}
+                        sx={{
+                            width: '100%',
+                            background: 'white'
+                        }}
+                    />
+                </Box>
 
                 <TextField
                     id='question'
@@ -119,6 +169,10 @@ const Survey = () => {
                     rows={4}
                     onChange={textFieldChange}
                     value={question}
+                    sx={{
+                        width: '100%',
+                        background: 'white'
+                    }}
                 />
 
                 {showAlert && (
@@ -130,7 +184,15 @@ const Survey = () => {
                     </Alert>
                 )}
 
-                <Button variant="contained" color="warning" type="submit">
+                <Button
+                    variant="contained"
+                    type="submit"
+                    sx={{
+                        padding: '1rem',
+                        marginTop: '0.7rem',
+                        width: '100%'
+                    }}
+                >
                     Susisiekti
                 </Button>
             </Box>
