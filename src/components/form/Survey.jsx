@@ -1,24 +1,30 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import Alert from '@mui/material/Alert';
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Container, TitleTypography } from "../../helpers/StyledBox";
 import emailjs from '@emailjs/browser';
 
 const Survey = () => {
     const [name, setName] = useState('');
-    const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
     const [question, setQuestion] = useState('');
-    const [showAlert, setShowAlert] = useState(false);
+    const [surname, setSurname] = useState('');
+    const [phone, setPhone] = useState('');
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showWarning, setShowWarning] = useState(false);
 
     const form = useRef();
 
-    useEffect(() => {
-        setTimeout(() => {
-            setShowAlert(false);
-        }, 10000);
-    }, [showAlert]);
+    const warningMessage = () => {
+        if (name.trim().length === 0
+            || question.trim().length === 0) {
+            return 'Užpildykite visus privalomus laukus.'
+        } else if (!(/^\S+@\S+\.\S+$/.test(email))) {
+            return 'Patikrinkite ar įvestas teisingas el. paštas.'
+        } else {
+            setShowWarning(false)
+        }
+    }
 
     const sendEmail = () => {
 
@@ -36,7 +42,7 @@ const Survey = () => {
             );
     };
 
-    const textFieldChange = () => {
+    const textFieldChange = (event) => {
         switch (event.target.id) {
             case 'name':
                 setName(event.target.value);
@@ -59,14 +65,25 @@ const Survey = () => {
     const handleClick = (e) => {
         e.preventDefault();
 
-        sendEmail();
-        setShowAlert(true);
-        setName('');
-        setSurname('');
-        setEmail('');
-        setPhone('');
-        setQuestion('');
-    };
+        if (name.trim().length > 0
+            && question.trim().length > 0
+            && /^\S+@\S+\.\S+$/.test(email)
+        ) {
+            console.log('viskas uzpildyta');
+            setShowWarning(false);
+            setShowSuccess(true);
+            sendEmail();
+
+            setName('');
+            setSurname('');
+            setEmail('');
+            setPhone('');
+            setQuestion('');
+        } else {
+            setShowWarning(true);
+            setShowSuccess(false);
+        }
+    }
 
     return (
         <Container>
@@ -112,7 +129,7 @@ const Survey = () => {
                         value={name}
                         sx={{
                             width: '100%',
-                            background: 'white'
+                            background: 'white',
                         }}
                     />
 
@@ -175,12 +192,21 @@ const Survey = () => {
                     }}
                 />
 
-                {showAlert && (
+                {showSuccess && (
                     <Alert severity="success"
                         sx={{
                             marginY: '1rem'
                         }}>
                         Jūsų žinute gavome, greitu metu susisieksime.
+                    </Alert>
+                )}
+
+                {showWarning && (
+                    <Alert severity="warning"
+                        sx={{
+                            marginY: '1rem'
+                        }}>
+                        {warningMessage()}
                     </Alert>
                 )}
 
