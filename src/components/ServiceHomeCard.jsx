@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography, useMediaQuery } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Typography, useMediaQuery, Box } from "@mui/material";
 import { TfiArrowRight } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';

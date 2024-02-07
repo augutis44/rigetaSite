@@ -1,8 +1,7 @@
-import { Box, Button, Grid} from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import { Container, TitleTypography } from "../helpers/StyledBox";
 import ServiceHomeCard from "./ServiceHomeCard";
 import { Link } from "react-router-dom";
-import { Height } from "@mui/icons-material";
 
 const ServicesMain = () => {
 
@@ -14,15 +13,20 @@ const ServicesMain = () => {
             <Grid container spacing={2} sx={{
                 display: 'flex',
                 flexWrap: 'nowrap',
-                flexDirection: { xs: 'column', md: 'row' }
+                flexDirection: { xs: 'column', md: 'row' },
             }}>
-                <Grid item>
-                    <ServiceHomeCard title={'Buhalterinės paslaugos'}>
+                <Grid item sx={{
+                    display: 'flex'
+                }}>
+                    <ServiceHomeCard
+                        title={'Buhalterinės paslaugos'}>
                         Curabitur et turpis vestibulum, ultricies urna vitae, lacinia est.
                         Maecenas ac velit metus. Nunc tincidunt, libero at tincidunt  turpis.
                     </ServiceHomeCard>
                 </Grid>
-                <Grid item>
+                <Grid item sx={{
+                    display: 'flex'
+                }}>
                     <ServiceHomeCard title={'Projektų paraiškų pildymas'}>
                         Curabitur et turpis vestibulum, ultricies urna
                         vitae, lacinia est. Maecenas ac velit metus.
