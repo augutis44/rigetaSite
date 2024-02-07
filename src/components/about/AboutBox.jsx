@@ -13,7 +13,7 @@ const AboutBox = () => {
             <Typography paragraph sx={{
                 textAlign: 'justify'
             }}>
-                Įmonė veikia nuo 2016 metų. Mūsų paslaugas perka 35 įmonės, kurios yra
+                Įmonė veikia nuo 2016 metų. Mūsų paslaugomis naudojasi 35 įmonės, kurios yra
                 iš įvairių pramonės šakų ir dydžių. Mes nerenkame savo klientų pagal
                 teritorinius apribojimus, jų veikla apima visą Lietuvos teritoriją.
                 <br />
