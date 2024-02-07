@@ -2,10 +2,10 @@
 import Footer from "../components/footer/Footer";
 import Survey from "../components/form/Survey";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";
-import MainTitle from "../components/MainTitle";
+import MainTitle from "../components/shared/MainTitle";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
-import MapsAndAbout from "../components/MapsAndAbout";
-import { ScrollToTop } from "../components/ScrollToTop";
+import MapsAndAbout from "../components/about/MapsAndAbout";
+import { ScrollToTop } from "../components/shared/ScrollToTop";
 
 const Contacts = () => {
 

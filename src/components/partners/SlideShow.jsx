@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import { Container, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../../helpers/StyledBox";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 const reviews = [

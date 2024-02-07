@@ -1,4 +1,4 @@
-import { Container, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../../helpers/StyledBox";
 import AccordionLogic from "./AccordionLogic";
 
 const accordionItems = [

@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import ItemCard from "./ItemCard";
-import { Container, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../../helpers/StyledBox";
 
 const cardItems = [
     {

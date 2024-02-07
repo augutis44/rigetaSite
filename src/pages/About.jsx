@@ -1,11 +1,11 @@
 import Footer from "../components/footer/Footer";
 import AboutBox from "../components/about/AboutBox";
-import SlideShow from "../components/SlideShow";
+import SlideShow from "../components/partners/SlideShow";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";
-import MainTitle from "../components/MainTitle";
-import MapsAndAbout from "../components/MapsAndAbout";
-import { ScrollToTop } from "../components/ScrollToTop";
+import MainTitle from "../components/shared/MainTitle";
+import MapsAndAbout from "../components/about/MapsAndAbout";
+import { ScrollToTop } from "../components/shared/ScrollToTop";
 
 const About = () => {
 

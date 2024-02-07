@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Grid, Typography } from "@mui/material";
-import { ColumnFlexBox } from "../helpers/StyledBox";
+import { ColumnFlexBox } from "../../helpers/StyledBox";
 import { Link } from "react-router-dom";
 
 const ItemCard = ({ label, price, content }) => {

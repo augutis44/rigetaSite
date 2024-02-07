@@ -2,7 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from 
 import { useState } from "react";
 import { SlArrowRight } from "react-icons/sl";
 import { styled } from '@mui/material/styles';
-import { Container, TitleTypography } from "../helpers/StyledBox";
+import { Container, TitleTypography } from "../../helpers/StyledBox";
 
 const StyledAccordionSummary = ({ children }) => {
     return (

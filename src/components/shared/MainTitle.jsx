@@ -1,6 +1,6 @@
 import { Card, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { Container } from "../helpers/StyledBox";
+import { Container } from "../../helpers/StyledBox";
 
 const MainTitle = ({ children }) => {
     const theme = useTheme();

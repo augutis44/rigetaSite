@@ -2,11 +2,11 @@ import MainPhoto from "../components/header/MainPhoto";
 import Footer from "../components/footer/Footer";
 import { BackBox, WhiteBox } from "../helpers/StyledBox";
 import AboutRigetaMain from "../components/about/AboutRigetaMain";
-import ServicesMain from "../components/ServicesMain";
-import HomeAccordion from "../components/HomeAccordion";
+import ServicesMain from "../components/services/ServicesMain";
+import HomeAccordion from "../components/services/HomeAccordion";
 import AppBarStyled from "../components/navigationBar/AppBarStyled";
-import PartnersMain from "../components/PartnersMain";
-import { ScrollToTop } from "../components/ScrollToTop";
+import PartnersMain from "../components/partners/PartnersMain";
+import { ScrollToTop } from "../components/shared/ScrollToTop";
 
 const Home = () => {
 

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import InformationRigeta from "./InformacionRigeta";
-import { TitleTypography } from "../helpers/StyledBox";
+import { TitleTypography } from "../../helpers/StyledBox";
 
 const MapsAndAbout = () => {
 
