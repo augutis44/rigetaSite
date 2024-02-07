@@ -192,6 +192,10 @@ const Survey = () => {
                     }}
                 />
 
+                <Typography>
+                    * pažymėti privalomi laukai
+                </Typography>
+
                 {showSuccess && (
                     <Alert severity="success"
                         sx={{
