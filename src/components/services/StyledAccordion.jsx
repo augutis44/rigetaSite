@@ -2,6 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuer
 import { SlArrowRight } from "react-icons/sl";
 import { styled } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 
 const StyledAccordionSummary = ({ children }) => {
     return (
@@ -18,7 +19,7 @@ const StyledAccordionSummary = ({ children }) => {
     )
 };
 
-const CustomAccordion = styled(Accordion)(({ theme }) => {
+const CustomAccordion = styled(Accordion)(() => {
     return {
         boxShadow: 'none', // this styles directly apply to accordion
         border: `1px solid gray`,
@@ -45,6 +46,16 @@ const StyledAccordion = ({ accordionItem, expanded, handleChange }) => {
             </AccordionDetails>
         </CustomAccordion>
     )
+}
+
+StyledAccordionSummary.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+StyledAccordion.propTypes = {
+    accordionItem: PropTypes.object.isRequired,
+    expanded: PropTypes.string.isRequired,
+    handleChange: PropTypes.func.isRequired,
 }
 
 export default StyledAccordion;

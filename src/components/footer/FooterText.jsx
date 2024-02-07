@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import PropTypes from 'prop-types';
 
 const FooterText = ({ name, children }) => {
 
@@ -22,6 +23,11 @@ const FooterText = ({ name, children }) => {
             </Typography>
         </Box>
     );
+}
+
+FooterText.propTypes = {
+    name: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default FooterText;

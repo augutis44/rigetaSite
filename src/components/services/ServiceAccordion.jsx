@@ -1,8 +1,9 @@
-import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import { useState } from "react";
 import { SlArrowRight } from "react-icons/sl";
 import { styled } from '@mui/material/styles';
 import { Container, TitleTypography } from "../../helpers/StyledBox";
+import PropTypes from 'prop-types';
 
 const StyledAccordionSummary = ({ children }) => {
     return (
@@ -19,7 +20,7 @@ const StyledAccordionSummary = ({ children }) => {
     )
 }
 
-const CustomAccordion = styled(Accordion)(({ theme }) => {
+const CustomAccordion = styled(Accordion)(() => {
     return {
         boxShadow: 'none', // this styles directly apply to accordion
         border: `1px solid gray`,
@@ -99,6 +100,10 @@ const ServiceAccordion = () => {
             </CustomAccordion>
         </Container>
     )
+}
+
+StyledAccordionSummary.propTypes = {
+    children: PropTypes.node.isRequired,
 }
 
 export default ServiceAccordion;

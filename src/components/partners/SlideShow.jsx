@@ -44,7 +44,7 @@ const SlideShow = () => {
         return () => {
             clearInterval(timer);
         };
-    }, [reviews, interval]);
+    }, [interval]);
 
     return (
         <Container>
@@ -82,4 +82,3 @@ const SlideShow = () => {
 }
 
 export default SlideShow;
-

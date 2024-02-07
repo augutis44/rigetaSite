@@ -1,5 +1,6 @@
 import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { ColumnFlexBox } from "../../helpers/StyledBox";
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 const ItemCard = ({ label, price, content }) => {
@@ -92,7 +93,12 @@ const ItemCard = ({ label, price, content }) => {
             </ColumnFlexBox>
         </Grid>
     )
+}
 
+ItemCard.propTypes = {
+    label: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    content: PropTypes.array.isRequired,
 }
 
 export default ItemCard;

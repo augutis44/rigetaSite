@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Container, TitleTypography } from "../../helpers/StyledBox";
 
-
 const PartnersMain = () => {
 
     return (

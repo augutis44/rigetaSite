@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Box, Button } from "@mui/material"
 import { GoArrowRight } from "react-icons/go";
+import PropTypes from 'prop-types';
 
 const RedButton = styled(Button)`
 background-color: #E63946;
@@ -33,7 +34,11 @@ const Buttons = ({ children, type }) => {
             </BlueButton>
         )
     }
+}
 
+Buttons.propTypes = {
+    children: PropTypes.node.isRequired,
+    type: PropTypes.string.isRequired,
 }
 
 export default Buttons;

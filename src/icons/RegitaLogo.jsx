@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const RegitaLogo = ({ variant, ...props }) => {
 
@@ -40,6 +40,10 @@ const RegitaLogo = ({ variant, ...props }) => {
             ></path>
         </svg>
     );
+}
+
+RegitaLogo.propTypes = {
+    variant: PropTypes.string.isRequired,
 }
 
 export default RegitaLogo;

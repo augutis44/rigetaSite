@@ -1,6 +1,7 @@
 import { Card, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { Container } from "../../helpers/StyledBox";
+import PropTypes from 'prop-types';
 
 const MainTitle = ({ children }) => {
     const theme = useTheme();
@@ -26,6 +27,10 @@ const MainTitle = ({ children }) => {
 
         </Card>
     )
+}
+
+MainTitle.propTypes = {
+    children: PropTypes.node.isRequired,
 }
 
 export default MainTitle;

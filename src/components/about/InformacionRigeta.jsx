@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import PropTypes from 'prop-types';
 
 const AlignedText = ({ children, type }) => {
 
@@ -59,6 +60,11 @@ const InformationRigeta = () => {
             </AlignedText>
         </>
     );
+}
+
+AlignedText.propTypes = {
+    type: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
 }
 
 export default InformationRigeta;

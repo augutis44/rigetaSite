@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { Box, Typography, useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-
+import { Box, Typography } from '@mui/material';
+import PropTypes from 'prop-types';
 
 export const FlexBox = styled(Box)`
 display: flex;
@@ -42,9 +41,6 @@ export const BackBox = ({ children }) => {
 }
 
 export const TitleTypography = ({ children }) => {
-    const theme = useTheme();
-    const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
-
     return (
         <Typography variant={'h3'} sx={{
             marginBottom: '2rem',
@@ -64,4 +60,20 @@ export const Container = ({ children }) => {
             {children}
         </Box>
     )
+}
+
+SideBox.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+BackBox.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+TitleTypography.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+Container.propTypes = {
+    children: PropTypes.node.isRequired,
 }

@@ -1,8 +1,8 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography, useMediaQuery, Box } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Typography, useMediaQuery } from "@mui/material";
 import { TfiArrowRight } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';
-
+import PropTypes from 'prop-types';
 
 const ServiceHomeCard = ({ title, children }) => {
     const theme = useTheme();
@@ -33,6 +33,11 @@ const ServiceHomeCard = ({ title, children }) => {
             </CardActions>
         </Card>
     );
+}
+
+ServiceHomeCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default ServiceHomeCard;
