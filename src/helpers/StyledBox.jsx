@@ -59,7 +59,7 @@ export const TitleTypography = ({ children }) => {
 export const Container = ({ children }) => {
     return (
         <Box sx={{
-            paddingX: { xs: "1rem", sm: "2rem", md: "4rem", lg: "8rem", xl: "12rem" }
+            paddingX: { xs: "1rem", sm: "2rem", md: "4rem", lg: "8rem", xl: "12rem", xxl: "22rem" }
         }}>
             {children}
         </Box>
