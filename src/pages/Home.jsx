@@ -15,10 +15,10 @@ const Home = () => {
             <ScrollToTop/>
             <AppBarStyled />
             <MainPhoto />
-            <WhiteBox />
+            {/* <WhiteBox />
             <BackBox>
                 <AboutRigetaMain />
-            </BackBox>
+            </BackBox> */}
             <WhiteBox />
             <BackBox>
                 <ServicesMain />
