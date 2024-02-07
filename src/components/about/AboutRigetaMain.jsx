@@ -17,13 +17,19 @@ const AboutRigetaMain = () => {
                 display: 'flex',
                 flexDirection: { xs: 'column', md: 'row-reverse' }
             }}>
-                <CardMedia
-                    component='img'
-                    alt='two people sitting in the office'
-                    image='/two-business-partners-working-together-office.jpg' sx={{
-                        maxheight: '30rem',
-                    }}
-                />
+                <Box sx={{
+                    maxheight: { xs: '15rem', md: '22rem' },
+                }}>
+                    <CardMedia
+                        component='img'
+                        alt='two people sitting in the office'
+                        image='/two-business-partners-working-together-office.jpg'
+                        sx={{
+                            height: { xs: '15rem', md: '100%' },
+                            
+                        }}
+                    />
+                </Box>
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
