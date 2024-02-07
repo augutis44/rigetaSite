@@ -30,6 +30,7 @@ const NavBarPc = ({ renderedLinks }) => {
                     style={{
                         display: 'flex',
                         alignItems: 'center',
+                        width: 'fit-content'
                     }}>
                     <RegitaLogo variant='white' width="205px" height="55px" />
                 </NavLink>
